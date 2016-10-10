@@ -24,7 +24,7 @@
     "url": "https://github.com/dequelabs/axe-cli/issues"
   },
   "bin": {
-    "axe": "./index.js",
+    "axe": "./index.js"
   },
   "homepage": "https://github.com/dequelabs/axe-cli#readme",
   "dependencies": {
