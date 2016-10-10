@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 'use strict';
+
 const program = require('commander');
 const colors = require('colors');
 const link = colors.underline.blue;
