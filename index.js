@@ -5,34 +5,35 @@ const colors = require('colors');
 const link = colors.underline.blue;
 const error = colors.red.bold;
 
+const version = require('./package.json').version;
 const axeTestUrls = require('./lib/axe-test-urls')
 const saveOutcome = require('./lib/save-outcome')
-const parseBrowser = require('./lib/utils').parseBrowser
-const parseUrl = require('./lib/utils').parseUrl
-
-const version = require('./package.json').version;
-
-const list = val => (val.split(/[,;]/)).map(str => str.trim());
+const utils = require('./lib/utils')
 
 program.version(version)
 .usage('<url...> [options]')
-.option('-i, --include <list>', 'CSS selector of included elements, comma separated', list)
-.option('-e, --exclude <list>', 'CSS selector of included elements, comma separated', list)
-.option('-r, --rules <list>', 'IDs of rules to run, comma separated', list)
-.option('-t, --tags <list>', 'Tags of rules to run, comma separated', list)
+.option('-i, --include <list>', 'CSS selector of included elements, comma separated', utils.splitList)
+.option('-e, --exclude <list>', 'CSS selector of included elements, comma separated', utils.splitList)
+.option('-r, --rules <list>', 'IDs of rules to run, comma separated', utils.splitList)
+.option('-t, --tags <list>', 'Tags of rules to run, comma separated', utils.splitList)
 .option('-b, --browser [browser-name]', 'Which browser to run (Webdriver required)')
 .option('-s, --save [filename]', 'Save the output as a JSON file. Filename is optional')
 .option('-d, --dir <path>', 'Output directory')
+.option('-a, --axe-source', 'Path to axe.js file')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
-program.browser = parseBrowser(program.browser);
+program.browser = utils.parseBrowser(program.browser)
+program.axeSource = utils.getAxeSource(program.axeSource);
+
+// Try to match the version of axe that's used
+const axeVersion = utils.getAxeVersion(program.axeSource)
 
 // Setup axe with the appropriate config
-console.log(colors.bold('Running axe-core in ' + program.browser))
+console.log(colors.bold('Running axe-core ' + axeVersion + ' in ' + program.browser))
 
 // Make valid URLs of all pages
-const urls = program.args.map(parseUrl);
+const urls = program.args.map(utils.parseUrl);
 
 if (urls.length === 0) {
 	console.log(error(
@@ -47,9 +48,10 @@ axeTestUrls(urls, program, {
 	 * Inform the user what page is tested
 	 */
 	onTestStart: function (url) {
-		console.log(colors.bold(
-			'\nTesting ' + link(url) + ' ... please wait'
-		));
+		console.log(
+			colors.bold('\nTesting ' + link(url)) +
+			' ... please wait, this may take a minute.'
+		);
 	},
 
 	/**
@@ -78,7 +80,7 @@ axeTestUrls(urls, program, {
 			return count + violation.nodes.length
 		}, 0);
 
-		console.log('\n%d Accessibility issues detected.', issueCount)
+		console.log(error('\n%d Accessibility issues detected.'), issueCount)
 	}
 }).then(function (outcome) {
 	// All results are in, quit the browser, and give a final report
@@ -105,7 +107,7 @@ axeTestUrls(urls, program, {
 	// Give a notification that 0 issues in axe doesn't mean perfect a11y
 	console.log(colors.italic('\n' +
 		'Please note that only 20% to 50% of all accessibility ' +
-		'issues can automatically be detected. Manual testing is ' +
+		'issues can automatically be detected. \nManual testing is ' +
 		'always required. For more information see:\n%s\n'
 	), link(
 		'https://dequeuniversity.com/curriculum/courses/testing'
@@ -118,5 +120,3 @@ axeTestUrls(urls, program, {
 		e.stack
 	);
 });
-
-
