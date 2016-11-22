@@ -48,7 +48,7 @@ axeTestUrls(urls, program, {
 	 */
 	onTestStart: function (url) {
 		console.log(colors.bold(
-			'\nTesting ' + link(url) + ' ...'
+			'\nTesting ' + link(url) + ' ... please wait'
 		));
 	},
 
@@ -106,7 +106,7 @@ axeTestUrls(urls, program, {
 	console.log(colors.italic('\n' +
 		'Please note that only 20% to 50% of all accessibility ' +
 		'issues can automatically be detected. Manual testing is ' +
-		'always required. For more information see: %s \n'
+		'always required. For more information see:\n%s\n'
 	), link(
 		'https://dequeuniversity.com/curriculum/courses/testing'
 	));

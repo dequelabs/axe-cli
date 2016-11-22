@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A CLI for accessibility testing using axe-core",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dequelabs/axe-cli.git"
@@ -24,13 +22,14 @@
     "url": "https://github.com/dequelabs/axe-cli/issues"
   },
   "bin": {
-    "axe": "./index.js"
+    "axe": "axe-cli"
   },
   "homepage": "https://github.com/dequelabs/axe-cli#readme",
   "dependencies": {
     "axe-core": "^2.0.7",
     "axe-webdriverjs": "^0.4.0",
     "colors": "^1.1.2",
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "selenium-webdriver": "^3.0.0"
   }
 }
