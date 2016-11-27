@@ -52,3 +52,15 @@ If you want to only test a specific area of a page, or wish to exclude some part
 ### Custom axe-core versions
 
 Axe-cli will look for locally available versions of axe-core. If the directory from where you start axe-cli has an `axe.js` file, or has a `node_modules` directory with axe-core installed in it. Axe-cli will use this version of axe-core instead of the default version installed globally.
+
+### Different browsers
+
+Axe-cli can run in a variety of web browsers. By default axe-cli uses PhantomJS, which is installed as a dependency. But axe-cli is equally capable of testing pages using other web browers. **Running in another browser requires that browser's webdriver to be installed**. You can find a list of available webdrivers at: https://www.npmjs.com/package/selenium-webdriver
+
+To run axe-cli using another browser, pass it in as the `--browser` option:
+
+  axe www.deque.com --browser chrome
+
+Or for short:
+
+  axe www.deque.com -b c
