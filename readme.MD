@@ -1,6 +1,6 @@
 # axe-cli
 
-Provides a command line interface for aXe to run quick accessibility tests.
+Provides a command line interface for aXe to run quick accessibility tests. This project is a work-in-progress.
 
 ## Getting Started
 
