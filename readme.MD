@@ -4,7 +4,7 @@ Provides a command line interface for aXe to run quick accessibility tests. This
 
 ## Getting Started
 
-Install [Node.js](https://docs.npmjs.com/getting-started/installing-node) if you haven't already.
+Install [Node.js](https://docs.npmjs.com/getting-started/installing-node) if you haven't already. This project requires Node 6+.
 
 Install axe-cli globally: `npm install axe-cli -g`
 
