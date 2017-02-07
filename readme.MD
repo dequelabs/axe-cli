@@ -28,7 +28,7 @@ You can run multiple pages at once, simply add more URLs to the command. If you 
 
 You can use the `--rules` flag to set which rules you wish to run, or you can use the `--tags` to tell axe to run all rules that have that specific tag. For example:
 
-	axe www.deque.com --rules color-contrast,html-lang
+	axe www.deque.com --rules color-contrast,html-has-lang
 
 Or, to run all wcag2a rules:
 
