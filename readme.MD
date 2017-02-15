@@ -39,13 +39,13 @@ A list of rules and what tags they have is available at: https://dequeuniversity
 
 ### Saving the results
 
-Results can be saved as JSON data, using the `--save` and `--dirname` flags. By passing a filename to `--save` you indicate how the file should be called. If no filename is passed, a default will be used. For example:
+Results can be saved as JSON data, using the `--save` and `--dir` flags. By passing a filename to `--save` you indicate how the file should be called. If no filename is passed, a default will be used. For example:
 
 	axe www.deque.com --save deque-site.json
 
 Or:
 
-	axe www.deque.com --dirname ./axe-results/
+	axe www.deque.com --dir ./axe-results/
 
 ### Defining the scope of a test
 
