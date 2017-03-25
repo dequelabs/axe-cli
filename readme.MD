@@ -24,6 +24,8 @@ You can run multiple pages at once, simply add more URLs to the command. If you 
 
 	axe www.deque.com, dequeuniversity.com
 
+**Note:** If you are having difficulty with the color scheme, use `--no-color` to disable text styles.
+
 ## Running specific rules
 
 You can use the `--rules` flag to set which rules you wish to run, or you can use the `--tags` to tell axe to run all rules that have that specific tag. For example:
