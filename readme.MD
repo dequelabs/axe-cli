@@ -65,8 +65,8 @@ Axe-cli can run in a variety of web browsers. By default axe-cli uses PhantomJS,
 
 To run axe-cli using another browser, pass it in as the `--browser` option:
 
-  axe www.deque.com --browser chrome
+	axe www.deque.com --browser chrome
 
 Or for short:
 
-  axe www.deque.com -b c
+	axe www.deque.com -b c
