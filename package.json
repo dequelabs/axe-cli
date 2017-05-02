@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "A CLI for accessibility testing using axe-core",
   "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {},
   "repository": {
     "type": "git",
