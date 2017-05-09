@@ -70,3 +70,12 @@ To run axe-cli using another browser, pass it in as the `--browser` option:
 Or for short:
 
 	axe www.deque.com -b c
+
+### CI integration
+
+Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.  
+
+Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a failure code `1` when any rule fails to pass.
+
+	axe www.deque.com --exit
+
