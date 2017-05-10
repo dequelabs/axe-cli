@@ -30,11 +30,11 @@
   },
   "homepage": "https://github.com/dequelabs/axe-cli#readme",
   "dependencies": {
-    "axe-core": "^2.1.7",
-    "axe-webdriverjs": "^0.5.0",
+    "axe-core": "^2.2.0",
+    "axe-webdriverjs": "^1.1.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "phantomjs-prebuilt": "^2.1.13",
+    "phantomjs-prebuilt": "^2.1.14",
     "selenium-webdriver": "^3.0.0"
   }
 }
