@@ -10,6 +10,10 @@ Provides a command line interface for [aXe](https://github.com/dequelabs/axe-cor
 
 Install [Node.js](https://docs.npmjs.com/getting-started/installing-node) if you haven't already. This project requires Node 6+.
 
+Install axe-core globally: `npm install axe-core -g`
+
+If axe-core is not installed first, it will install along with axe-cli.
+
 Install axe-cli globally: `npm install axe-cli -g`
 
 Lastly, install the webdrivers of the browsers you wish to use. A webdriver is a driver for your web browsers. It allows other programs on your machine to open a browser and operate it. Current information about available webdrivers can be found at [selenium-webdriver project](https://www.npmjs.com/package/selenium-webdriver). Alternatively, you could use [Webdriver manager](https://www.npmjs.com/package/webdriver-manager)
