@@ -19,12 +19,19 @@ program.version(version)
 .option('-b, --browser [browser-name]', 'Which browser to run (Webdriver required)')
 .option('-s, --save [filename]', 'Save the output as a JSON file. Filename is optional')
 .option('-d, --dir <path>', 'Output directory')
-.option('-a, --axe-source', 'Path to axe.js file')
+.option('-a, --axe-source <path>', 'Path to axe.js file')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
 program.browser = utils.parseBrowser(program.browser)
 program.axeSource = utils.getAxeSource(program.axeSource);
+
+if (!program.axeSource) {
+	console.log(error(
+		'Unable to find the axe-core source file.'
+	))
+	return 
+}
 
 // Try to match the version of axe that's used
 const axeVersion = utils.getAxeVersion(program.axeSource)
