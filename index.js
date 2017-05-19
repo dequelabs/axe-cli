@@ -20,6 +20,8 @@ program.version(version)
 .option('-s, --save [filename]', 'Save the output as a JSON file. Filename is optional')
 .option('-d, --dir <path>', 'Output directory')
 .option('-a, --axe-source <path>', 'Path to axe.js file')
+.option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
+
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
@@ -46,6 +48,7 @@ if (urls.length === 0) {
 	console.log(error(
 		'No url was specified. Check `axe -h` for help\n'
 	))
+	process.exitCode = 1;
 	return;
 }
 
@@ -88,6 +91,10 @@ axeTestUrls(urls, program, {
 		}, 0);
 
 		console.log(error('\n%d Accessibility issues detected.'), issueCount)
+
+		if (program.exit) {
+			process.exitCode = 1;
+		}
 	}
 }).then(function (outcome) {
 	// All results are in, quit the browser, and give a final report
@@ -104,6 +111,7 @@ axeTestUrls(urls, program, {
 			console.log('\nSaved file at', fileName)
 		}).catch(err => {
 			console.log(error('\nUnable to save file!\n') + err);
+			process.exitCode = 1;
 			return Promise.resolve();
 		})
 	} else {
@@ -120,6 +128,8 @@ axeTestUrls(urls, program, {
 		'https://dequeuniversity.com/curriculum/courses/testing'
 	));
 }).catch((e) => {
+	process.exitCode = 1;
+
 	// On error, report it and quit the browser
 	console.log(
 		colors.red('Error: %j \n $s'),

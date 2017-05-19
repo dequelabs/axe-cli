@@ -69,8 +69,17 @@ Axe-cli can run in a variety of web browsers. By default axe-cli uses PhantomJS,
 
 To run axe-cli using another browser, pass it in as the `--browser` option:
 
-  axe www.deque.com --browser chrome
+	axe www.deque.com --browser chrome
 
 Or for short:
 
-  axe www.deque.com -b c
+	axe www.deque.com -b c
+
+### CI integration
+
+Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.  
+
+Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a failure code `1` when any rule fails to pass.
+
+	axe www.deque.com --exit
+
