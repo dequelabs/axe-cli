@@ -1,4 +1,6 @@
 /* global mocha */
+'use strict';
+
 const assert = require('chai').assert
 const startDriver = require('../lib/webdriver').startDriver
 const stopDriver = require('../lib/webdriver').stopDriver

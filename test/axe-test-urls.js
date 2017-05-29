@@ -1,4 +1,6 @@
 /* global mocha */
+'use strict';
+
 const assert = require('chai').assert
 const testPages = require('../lib/axe-test-urls')
 
