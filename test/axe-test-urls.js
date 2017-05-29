@@ -1,5 +1,5 @@
 /* global mocha */
-const { assert } = require('chai')
+const assert = require('chai').assert
 const testPages = require('../lib/axe-test-urls')
 
 describe('testPages', function () {
@@ -15,9 +15,7 @@ describe('testPages', function () {
       findElements: () => Promise.resolve([]),
       quit: (arg) => Promise.resolve(arg)
     }
-    config = {
-      driver: mockDriver,
-    }
+    config = { driver: mockDriver }
   })
 
   it('return a promise', () => {

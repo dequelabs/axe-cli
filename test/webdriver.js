@@ -1,6 +1,7 @@
 /* global mocha */
-const { assert } = require('chai')
-const { startDriver, stopDriver } = require('../lib/webdriver')
+const assert = require('chai').assert
+const startDriver = require('../lib/webdriver').startDriver
+const stopDriver = require('../lib/webdriver').stopDriver
 
 describe('startDriver', () => {
   it('returns a promise', () => {
