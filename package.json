@@ -1,8 +1,11 @@
 {
   "name": "axe-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A CLI for accessibility testing using axe-core",
   "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "test": "mocha test/*.js"
   },
