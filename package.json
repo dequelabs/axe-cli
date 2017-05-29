@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A CLI for accessibility testing using axe-core",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dequelabs/axe-cli.git"
@@ -36,5 +38,9 @@
     "commander": "^2.9.0",
     "phantomjs-prebuilt": "^2.1.14",
     "selenium-webdriver": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2"
   }
 }
