@@ -35,9 +35,21 @@ describe('startDriver', () => {
 })
 
 describe('stopDriver', () => {
-  it('calls phantom.kill if phantom is set', () => {
+  it('calls phantom.kill if phantomjs is set', () => {
     let called = 0;
-    stopDriver({ phantom: { kill: () => called++ } })
+    stopDriver({
+      browser: 'phantomjs',
+      phantom: { kill: () => called++ }
+    })
+    assert.equal(called, 1)
+  })
+
+  it('calls browser.quit if phantomjs is not set', () => {
+    let called = 0;
+    stopDriver({
+      browser: 'chrome',
+      driver: { quit: () => called++ }
+    })
     assert.equal(called, 1)
   })
 })
