@@ -21,6 +21,7 @@ program.version(version)
 .option('-d, --dir <path>', 'Output directory')
 .option('-a, --axe-source', 'Path to axe.js file')
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
+.option('--timer', 'Log the time it takes to run')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
@@ -54,12 +55,19 @@ axeTestUrls(urls, program, {
 			colors.bold('\nTesting ' + link(url)) +
 			' ... please wait, this may take a minute.'
 		);
+		if (program.timer) {
+			console.time('Total test time');
+		}
 	},
 
 	/**
 	 * Put the result in the console
 	 */
 	onTestComplete: function logResults(results) {
+		if (program.timer) {
+			console.timeEnd('Total test time');
+		}
+
 		const violations = results.violations
 		if (violations.length === 0) {
 			console.log(colors.green('  0 violations found!'))
