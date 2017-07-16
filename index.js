@@ -21,6 +21,7 @@ program.version(version)
 .option('-d, --dir <path>', 'Output directory')
 .option('-a, --axe-source', 'Path to axe.js file')
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
+.option('--timeout <n>', 'Set how much time (second) axe has to run (default: 90)', 90)
 .option('--timer', 'Log the time it takes to run')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
