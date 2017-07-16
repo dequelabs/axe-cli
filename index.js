@@ -23,6 +23,7 @@ program.version(version)
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
 .option('--timeout <n>', 'Set how much time (second) axe has to run (default: 90)', 90)
 .option('--timer', 'Log the time it takes to run')
+.option('--show-errors', 'Display the full error stack')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
@@ -129,12 +130,18 @@ axeTestUrls(urls, program, {
 		'https://dequeuniversity.com/curriculum/courses/testing'
 	));
 }).catch((e) => {
-	process.exitCode = 1;
+	console.log(' ');
+	if (!program['show-errors']) {
+		console.log(error('An error occurred while testing this page.'));
+	} else {
+		console.log(
+			error('Error: %j \n $s'),
+			e.message,
+			e.stack
+		);
+	}
 
-	// On error, report it and quit the browser
-	console.log(
-		colors.red('Error: %j \n $s'),
-		e.message,
-		e.stack
-	);
+	console.log('Please report the problem to: ' +
+		link('https://github.com/dequelabs/axe-cli/issues/') + '\n');
+	process.exit(1);
 });
