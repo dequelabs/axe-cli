@@ -79,6 +79,24 @@ Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a f
 
 	axe www.deque.com --exit
 
+## Changing the reporter
+
+Axe-cli can output the axe-core JSON results directly to the console. You can do this setting the reporter from the default (`cli`) to one of the reporters available in axe-core (such as `raw`, `no-passes`, `v1` or `v2`). This turns off any other type of logging, so you'll receive an array with the results of each page tested.
+
+This can be used in tools such as NodeJS to retrieve results directly, rather than having to read them from a file:
+
+```js:
+	const { exec } = require('child_process');
+	exec('axe axe-core.org deque.com --reporter=no-passes',
+			{ maxeBuffer: 500 * 1024 },
+			function (err, stdout, stderr) {
+		if (err) return console.error(stderr);
+		JSON.parse(stdout).forEach(({ url, violations }) => {
+			console.log(url, 'has', violations.length, 'aXe violations');
+		})
+	});
+```
+
 ## Timing and timeout
 
 For debugging and managing timeouts, there are two options available. With `--timer` set, axe-cli will log how long it takes to load the page, and how long it takes to run axe-core. If you find the execution of axe-core takes too long, which can happen on very large pages, use `--timeout` to increase the time axe has to test that page:
