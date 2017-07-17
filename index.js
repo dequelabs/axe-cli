@@ -21,10 +21,10 @@ program.version(version)
 .option('-a, --axe-source', 'Path to axe.js file')
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
 .option('-p, --reporter [name]', 'Which format to use for the output (default cli)', 'cli')
+// .option('-c, --config <file>', 'Path to custom axe configuration')
 .option('--timeout <n>', 'Set how much time (second) axe has to run (default: 90)', 90)
 .option('--timer', 'Log the time it takes to run')
 .option('--debug', 'Display the full error stack')
-// .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
 program.browser = utils.parseBrowser(program.browser)
