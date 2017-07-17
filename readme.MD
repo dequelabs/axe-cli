@@ -39,7 +39,7 @@ Or, to run all wcag2a rules:
 
 A list of rules and what tags they have is available at: https://dequeuniversity.com/rules/worldspace/2.0/.
 
-### Saving the results
+## Saving the results
 
 Results can be saved as JSON data, using the `--save` and `--dir` flags. By passing a filename to `--save` you indicate how the file should be called. If no filename is passed, a default will be used. For example:
 
@@ -49,13 +49,13 @@ Or:
 
 	axe www.deque.com --dir ./axe-results/
 
-### Defining the scope of a test
+## Defining the scope of a test
 
 If you want to only test a specific area of a page, or wish to exclude some part of a page you can do so using the `--include` and `--exclude` flags and pass it a CSS seletor:
 
 	axe www.deque.com --include #main --exclude #aside
 
-### Custom axe-core versions
+## Custom axe-core versions
 
 Axe-cli will look for locally available versions of axe-core. If the directory from where you start axe-cli has an `axe.js` file, or has a `node_modules` directory with axe-core installed in it. Axe-cli will use this version of axe-core instead of the default version installed globally.
 
@@ -63,7 +63,7 @@ To specify the exact file axe-core file axe-cli should use, you can use the `--a
 
   axe www.deque.com --axe-source ./axe.nl.js
 
-### Different browsers
+## Different browsers
 
 Axe-cli can run in a variety of web browsers. By default axe-cli uses PhantomJS, which is installed as a dependency. But axe-cli is equally capable of testing pages using other web browers. **Running in another browser requires that browser's webdriver to be installed**. You can find a list of available webdrivers at: https://www.npmjs.com/package/selenium-webdriver
 
@@ -75,7 +75,7 @@ Or for short:
 
 	axe www.deque.com -b c
 
-### CI integration
+## CI integration
 
 Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.  
 
@@ -83,3 +83,8 @@ Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a f
 
 	axe www.deque.com --exit
 
+## Timing and timeout
+
+For debugging and managing timeouts, there are two options available. With `--timer` set, axe-cli will log how long it takes to load the page, and how long it takes to run axe-core. If you find the execution of axe-core takes too long, which can happen on very large pages, use `--timeout` to increase the time axe has to test that page:
+
+	axe www.cnn.com --timeout=120
