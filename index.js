@@ -21,11 +21,26 @@ program.version(version)
 .option('-d, --dir <path>', 'Output directory')
 .option('-a, --axe-source', 'Path to axe.js file')
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
+.option('--timeout <n>', 'Set how much time (second) axe has to run (default: 90)', 90)
+.option('--timer', 'Log the time it takes to run')
+.option('--show-errors', 'Display the full error stack')
+// TODO: Replace this with a reporter option, this required adding
+// a reporter option to axe-webdriverjs
+.option('--no-reporter', 'Turn the CLI reporter off')
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
 program.browser = utils.parseBrowser(program.browser)
 program.axeSource = utils.getAxeSource(program.axeSource);
+
+let cliReporter;
+if (program['no-reporter']) {
+	cliReporter = function () {};
+} else {
+	cliReporter = function (...args) {
+		console.log(...args)
+	};
+}
 
 // Try to match the version of axe that's used
 const axeVersion = utils.getAxeVersion(program.axeSource)
@@ -54,6 +69,9 @@ axeTestUrls(urls, program, {
 			colors.bold('\nTesting ' + link(url)) +
 			' ... please wait, this may take a minute.'
 		);
+		if (program.timer) {
+			console.time('Total test time');
+		}
 	},
 
 	/**
@@ -62,12 +80,12 @@ axeTestUrls(urls, program, {
 	onTestComplete: function logResults(results) {
 		const violations = results.violations
 		if (violations.length === 0) {
-			console.log(colors.green('  0 violations found!'))
+			cliReporter(colors.green('  0 violations found!'))
 			return;
 		}
 
 		const issueCount = violations.reduce((count, violation) => {
-			console.log('\n' + error(
+			cliReporter('\n' + error(
 				'  Violation of %j with %d occurrences!\n') +
 				'    %s. Correct invalid elements at:\n' +
 				(violation.nodes.map( node =>
@@ -82,27 +100,34 @@ axeTestUrls(urls, program, {
 			return count + violation.nodes.length
 		}, 0);
 
-		console.log(error('\n%d Accessibility issues detected.'), issueCount)
+		cliReporter(error('\n%d Accessibility issues detected.'), issueCount)
 
 		if (program.exit) {
 			process.exitCode = 1;
 		}
 	}
 }).then(function (outcome) {
+	console.log('');
+	if (program.timer) {
+		console.timeEnd('Total test time');
+	}
 	// All results are in, quit the browser, and give a final report
 	if (outcome.length > 1) {
 		console.log(colors.bold.underline(
-			'Testing complete of %d pages'),
+			'Testing complete of %d pages\n'),
 			outcome.length
 		);
+	} else if (program.timer) {
+		console.log('');
 	}
+
 	// Save the outcome
 	if (program.save || program.dir) {
 		return saveOutcome(outcome, program.save, program.dir)
 		.then(fileName => {
-			console.log('\nSaved file at', fileName)
+			console.log('Saved file at', fileName, '\n')
 		}).catch(err => {
-			console.log(error('\nUnable to save file!\n') + err);
+			console.log(error('Unable to save file!\n') + err);
 			process.exitCode = 1;
 			return Promise.resolve();
 		})
@@ -111,8 +136,9 @@ axeTestUrls(urls, program, {
 	}
 
 }).then(() => {
+
 	// Give a notification that 0 issues in axe doesn't mean perfect a11y
-	console.log(colors.italic('\n' +
+	console.log(colors.italic(
 		'Please note that only 20% to 50% of all accessibility ' +
 		'issues can automatically be detected. \nManual testing is ' +
 		'always required. For more information see:\n%s\n'
@@ -120,12 +146,18 @@ axeTestUrls(urls, program, {
 		'https://dequeuniversity.com/curriculum/courses/testing'
 	));
 }).catch((e) => {
-	process.exitCode = 1;
+	console.log(' ');
+	if (!program['show-errors']) {
+		console.log(error('An error occurred while testing this page.'));
+	} else {
+		console.log(
+			error('Error: %j \n $s'),
+			e.message,
+			e.stack
+		);
+	}
 
-	// On error, report it and quit the browser
-	console.log(
-		colors.red('Error: %j \n $s'),
-		e.message,
-		e.stack
-	);
+	console.log('Please report the problem to: ' +
+		link('https://github.com/dequelabs/axe-cli/issues/') + '\n');
+	process.exit(1);
 });
