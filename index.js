@@ -19,7 +19,7 @@ program.version(version)
 .option('-b, --browser [browser-name]', 'Which browser to run (Webdriver required)')
 .option('-s, --save [filename]', 'Save the output as a JSON file. Filename is optional')
 .option('-d, --dir <path>', 'Output directory')
-.option('-a, --axe-source', 'Path to axe.js file')
+.option('-a, --axe-source <path>', 'Path to axe.js file')
 .option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
 .option('--timeout <n>', 'Set how much time (second) axe has to run (default: 90)', 90)
 .option('--timer', 'Log the time it takes to run')
@@ -27,14 +27,22 @@ program.version(version)
 // TODO: Replace this with a reporter option, this required adding
 // a reporter option to axe-webdriverjs
 .option('--no-reporter', 'Turn the CLI reporter off')
+
 // .option('-c, --config <file>', 'Path to custom axe configuration')
 .parse(process.argv);
 
 program.browser = utils.parseBrowser(program.browser)
 program.axeSource = utils.getAxeSource(program.axeSource);
 
+if (!program.axeSource) {
+	console.log(error(
+		'Unable to find the axe-core source file.'
+	));
+	return 
+}
+
 let cliReporter;
-if (program['no-reporter']) {
+if (program.reporter === false) {
 	cliReporter = function () {};
 } else {
 	cliReporter = function (...args) {
