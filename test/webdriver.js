@@ -6,15 +6,17 @@ const startDriver = require('../lib/webdriver').startDriver
 const stopDriver = require('../lib/webdriver').stopDriver
 
 describe('startDriver', () => {
-	it('returns a promise', () => {
-		const out = startDriver({ 'browser': 'phantomjs' })
+	it('returns a promise', (done) => {
+		const out = startDriver({ 'browser': 'chrome' })
 
 		assert.isFunction(out.then)
 		assert.isFunction(out.catch)
+		out.then(stopDriver)
+			.then(done)
 	})
 
 	it('creates a driver', (done) => {
-		startDriver({ 'browser': 'phantomjs' })
+		startDriver({ 'browser': 'chrome' })
 		.then((config) => {
 			assert.isObject(config.driver)
 			assert.isFunction(config.driver.manage)
@@ -23,28 +25,10 @@ describe('startDriver', () => {
 			done()
 		})
 	})
-
-	it('adds phantom if phantom is set', (done) => {
-		startDriver({ 'browser': 'phantomjs' })
-		.then((config) => {
-			assert.isObject(config.phantom)
-			stopDriver(config)
-			done()
-		})
-	})
 })
 
 describe('stopDriver', () => {
-	it('calls phantom.kill if phantomjs is set', () => {
-		let called = 0;
-		stopDriver({
-			browser: 'phantomjs',
-			phantom: { kill: () => called++ }
-		})
-		assert.equal(called, 1)
-	})
-
-	it('calls browser.quit if phantomjs is not set', () => {
+	it('calls browser.quit', () => {
 		let called = 0;
 		stopDriver({
 			browser: 'chrome',
