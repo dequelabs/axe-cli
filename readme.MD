@@ -8,7 +8,7 @@ Provides a command line interface for [aXe](https://github.com/dequelabs/axe-cor
 
 ## Getting Started
 
-Install [Node.js](https://docs.npmjs.com/getting-started/installing-node) if you haven't already. This project requires Node 6+.
+Install [Node.js](https://docs.npmjs.com/getting-started/installing-node) if you haven't already. This project requires Node 6+. By default, axe-cli runs Chrome in headless mode, which requires Chrome 59 or up.
 
 Install axe-cli globally: `npm install axe-cli -g`
 
@@ -20,7 +20,7 @@ After installing, you can now run the `axe` command in your CLI, followed by the
 
 	axe https://www.deque.com
 
-You can run multiple pages at once, simply add more URLs to the command. If you do not specify the protocol, http will be used by default
+You can run multiple pages at once, simply add more URLs to the command. If you do not specify the protocol, http will be used by default:
 
 	axe www.deque.com, dequeuniversity.com
 
@@ -65,7 +65,7 @@ To specify the exact file axe-core file axe-cli should use, you can use the `--a
 
 ## Different browsers
 
-Axe-cli can run in a variety of web browsers. By default axe-cli uses PhantomJS, which is installed as a dependency. But axe-cli is equally capable of testing pages using other web browers. **Running in another browser requires that browser's webdriver to be installed**. You can find a list of available webdrivers at: https://www.npmjs.com/package/selenium-webdriver
+Axe-cli can run in a variety of web browsers. By default axe-cli uses Chrome in headless mode. But axe-cli is equally capable of testing pages using other web browers. **Running in another browser requires that browser's webdriver to be installed**. You can find a list of available webdrivers at: https://www.npmjs.com/package/selenium-webdriver
 
 To run axe-cli using another browser, pass it in as the `--browser` option:
 
