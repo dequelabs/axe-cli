@@ -1,6 +1,6 @@
 {
   "name": "axe-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A CLI for accessibility testing using axe-core",
   "main": "index.js",
   "engines": {
@@ -33,8 +33,8 @@
   },
   "homepage": "https://github.com/dequelabs/axe-cli#readme",
   "dependencies": {
-    "axe-core": "^2.3.1",
-    "axe-webdriverjs": "^1.1.3",
+    "axe-core": "^2.4.1",
+    "axe-webdriverjs": "^1.1.4",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "phantomjs-prebuilt": "^2.1.13",
