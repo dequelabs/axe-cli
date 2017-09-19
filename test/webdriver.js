@@ -11,7 +11,7 @@ describe('startDriver', () => {
   beforeEach(() => {
     browser = 'chrome-headless'
     config = {
-      get browser() { return browser }
+      get browser () { return browser }
     }
   })
 

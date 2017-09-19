@@ -7,7 +7,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "mocha test/*.js && eslint lib/*.js, test/*.js"
+    "test": "nyc --reporter=html --reporter=text mocha test/*.js && eslint lib/*.js, test/*.js"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,10 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "nyc": "^11.2.1"
+  },
+  "nyc": {
+    "temp-directory": "./coverage/.nyc_output"
   }
 }
