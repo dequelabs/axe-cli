@@ -4,12 +4,6 @@ machine:
 
 dependencies:
   pre:
-  # Install Selenium.
-  - curl http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar > selenium-server-standalone.jar
-  - curl http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip | gzip -dc > chromedriver
-  - chmod +x chromedriver
-  - 'java -jar selenium-server-standalone.jar -trustAllSSLCertificates -Dwebdriver.chrome.driver=chromedriver':
-        background: true
   # Update Google Chrome.
   - google-chrome --version
   - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -

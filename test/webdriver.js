@@ -41,7 +41,7 @@ describe('startDriver', () => {
 			.then(done, done)
 	})
 
-	it('sets the config.browser as the browser', done => {
+	xit('sets the config.browser as the browser', done => {
 		browser = 'chrome'
 		startDriver(config)
 			.then(config => config.driver.getCapabilities())
