@@ -1,7 +1,7 @@
 
 
-<a name="1.1.0"></a>
-## [1.1.0](https://github.com/dequelabs/axe-cli/compare/1.0.3...1.1.0) (2017-09-20)
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/dequelabs/axe-cli/compare/1.0.3...1.1.1) (2017-09-20)
 
 
 ### New Features
