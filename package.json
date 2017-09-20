@@ -6,7 +6,10 @@
   "engines": {
     "node": ">=6"
   },
-  "scripts": {},
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dequelabs/axe-cli.git"
@@ -38,6 +41,8 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "phantomjs-prebuilt": "^2.1.13",
-    "selenium-webdriver": "^3.0.0"
-  }
+    "selenium-webdriver": "^3.0.0",
+    "snyk": "^1.38.2"
+  },
+  "snyk": true
 }
