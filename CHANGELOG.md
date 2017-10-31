@@ -1,3 +1,12 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/dequelabs/axe-cli/compare/1.0.2...1.2.0) (2017-10-31)
+
+
+### Features
+
+* Allow running from file:// and ftp(s):// ([#41](https://github.com/dequelabs/axe-cli/issues/41)) ([aa3d937](https://github.com/dequelabs/axe-cli/commit/aa3d937))
+* Link to DeqeuU courses/testingmethods ([#38](https://github.com/dequelabs/axe-cli/issues/38)) ([8c0e661](https://github.com/dequelabs/axe-cli/commit/8c0e661))
+* support exit codes ([e14e2d5](https://github.com/dequelabs/axe-cli/commit/e14e2d5)), closes [#20](https://github.com/dequelabs/axe-cli/issues/20) [#22](https://github.com/dequelabs/axe-cli/issues/22)
 
 
 <a name="1.1.1"></a>
