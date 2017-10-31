@@ -151,7 +151,7 @@ axeTestUrls(urls, program, {
 		'issues can automatically be detected. \nManual testing is ' +
 		'always required. For more information see:\n%s\n'
 	), link(
-		'https://dequeuniversity.com/curriculum/courses/testing'
+		'https://dequeuniversity.com/curriculum/courses/testingmethods'
 	));
 }).catch((e) => {
 	console.log(' ');
