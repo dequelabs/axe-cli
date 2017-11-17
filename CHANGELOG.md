@@ -1,3 +1,20 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/dequelabs/axe-cli/compare/v1.1.1...v1.3.0) (2017-11-17)
+
+
+### Bug Fixes
+
+* package.json & .snyk to reduce vulnerabilities ([#39](https://github.com/dequelabs/axe-cli/issues/39)) ([9b20eef](https://github.com/dequelabs/axe-cli/commit/9b20eef))
+
+
+### Features
+
+* Add flag that enables supplying a list of rules to be skipped during the analysis ([d22903d](https://github.com/dequelabs/axe-cli/commit/d22903d))
+* Allow running from file:// and ftp(s):// ([#41](https://github.com/dequelabs/axe-cli/issues/41)) ([aa3d937](https://github.com/dequelabs/axe-cli/commit/aa3d937))
+* Link to DeqeuU courses/testingmethods ([#38](https://github.com/dequelabs/axe-cli/issues/38)) ([8c0e661](https://github.com/dequelabs/axe-cli/commit/8c0e661))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/dequelabs/axe-cli/compare/1.0.2...1.2.0) (2017-10-31)
 
