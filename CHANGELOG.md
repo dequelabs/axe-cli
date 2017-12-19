@@ -1,3 +1,12 @@
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/dequelabs/axe-cli/compare/v1.3.0...v1.3.1) (2017-12-19)
+
+
+### Features
+
+* Add axe-core 2.6.0
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/dequelabs/axe-cli/compare/v1.1.1...v1.3.0) (2017-11-17)
 
