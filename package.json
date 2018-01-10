@@ -35,8 +35,8 @@
   },
   "homepage": "https://github.com/dequelabs/axe-cli#readme",
   "dependencies": {
-    "axe-core": "^2.4.1",
-    "axe-webdriverjs": "^1.1.5",
+    "axe-core": "^2.6.0",
+    "axe-webdriverjs": "^1.2.1",
     "chromedriver": "^2.32.3",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
@@ -44,6 +44,8 @@
   },
   "devDependencies": {
     "chai": "^4.0.0",
-    "mocha": "^3.4.2"
-  }
+    "mocha": "^3.4.2",
+    "snyk": "^1.41.1"
+  },
+  "snyk": true
 }

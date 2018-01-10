@@ -28,7 +28,7 @@ You can run multiple pages at once, simply add more URLs to the command. If you 
 
 ## Running specific rules
 
-You can use the `--rules` flag to set which rules you wish to run, or you can use the `--tags` to tell axe to run all rules that have that specific tag. For example:
+You can use the `--rules` flag to set which rules you wish to run, or you can use `--tags` to tell axe to run all rules that have that specific tag. For example:
 
 	axe www.deque.com --rules color-contrast,html-has-lang
 
@@ -36,6 +36,12 @@ Or, to run all wcag2a rules:
 
 	axe www.deque.com --tags wcag2a
 
+
+In case you want to disable some rules, you can use `--disable` followed by a list of rules. These will be skipped when analyzing the site:
+
+    axe www.deque.com --disable color-contrast
+
+This option can be combined with either `--tags` or `--rules`.
 
 A list of rules and what tags they have is available at: https://dequeuniversity.com/rules/worldspace/2.0/.
 
