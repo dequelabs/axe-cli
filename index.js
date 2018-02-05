@@ -98,7 +98,7 @@ axeTestUrls(urls, program, {
 				'  Violation of %j with %d occurrences!\n') +
 				'    %s. Correct invalid elements at:\n' +
 				(violation.nodes.map( node =>
-				'     - ' + node.target + '\n'
+				'     - ' + utils.selectorToString(node.target) + '\n'
 				).join('')) +
 				'    For details, see: %s',
 				violation.id,
