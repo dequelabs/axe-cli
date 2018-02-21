@@ -1,3 +1,34 @@
+<a name="2.1.0-alpha.0"></a>
+# [2.1.0-alpha.0](https://github.com/dequelabs/axe-cli/compare/v2.0.0...v2.1.0-alpha.0) (2018-02-20)
+
+
+### Bug Fixes
+
+* Security vulnerability in hoek package ([#50](https://github.com/dequelabs/axe-cli/issues/50)) ([81695ad](https://github.com/dequelabs/axe-cli/commit/81695ad))
+
+### Features
+
+* Upgrade axe-core to 3.0.0-beta.1
+* Upgrade axe-webdriverjs to 2.0.0-alpha.1
+
+
+
+<a name="2.0.0"></a>
+## [2.0.0](https://github.com/dequelabs/axe-cli/compare/v1.3.1...v2.0.0) (2017-12-19)
+
+
+### Features
+
+* Use chrome-headless as default browser replacing PhantomJS ([1ae8e12](https://github.com/dequelabs/axe-cli/commit/1ae8e12))
+
+
+### BREAKING CHANGES
+
+* PhantomJS is no longer maintained. We will be
+replacing it with headless Chrome
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/dequelabs/axe-cli/compare/v1.3.0...v1.3.1) (2017-12-19)
 
