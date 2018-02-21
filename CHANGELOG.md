@@ -1,3 +1,13 @@
+<a name="2.1.0-alpha.1"></a>
+# [2.1.0-alpha.1](https://github.com/dequelabs/axe-cli/compare/v2.1.0-alpha.0...v2.1.0-alpha.1) (2018-02-21)
+
+
+### Features
+
+* Support aXe-core 3.0 Shadow DOM selectors ([#49](https://github.com/dequelabs/axe-cli/issues/49)) ([790b421](https://github.com/dequelabs/axe-cli/commit/790b421))
+
+
+
 <a name="2.1.0-alpha.0"></a>
 # [2.1.0-alpha.0](https://github.com/dequelabs/axe-cli/compare/v2.0.0...v2.1.0-alpha.0) (2018-02-20)
 
