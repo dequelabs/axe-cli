@@ -37,7 +37,7 @@
   "dependencies": {
     "axe-core": "^3.0.0-beta.1",
     "axe-webdriverjs": "^2.0.0-alpha.1",
-    "chromedriver": "^2.32.3",
+    "chromedriver": "^2.36.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "selenium-webdriver": "^3.5.0"
