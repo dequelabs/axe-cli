@@ -42,7 +42,7 @@ describe('testPages', function () {
 		setTimeout(() => {
 			assert.deepEqual(urlsCalled, urls)
 			done()
-		}, 30)
+		}, 50)
 	})
 
 	it('waits until the document is ready to have a className added', (done) => {
