@@ -94,3 +94,9 @@ Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a f
 For debugging and managing timeouts, there are two options available. With `--timer` set, axe-cli will log how long it takes to load the page, and how long it takes to run axe-core. If you find the execution of axe-core takes too long, which can happen on very large pages, use `--timeout` to increase the time axe has to test that page:
 
 	axe www.cnn.com --timeout=120
+
+## Delay audit to ensure page is loaded
+
+If you find your page is not ready after axe has determined it has loaded, you can use `--load-delay` followed by a number in milliseconds. This will make axe wait that time before running the audit after the page has loaded.
+
+    axe www.deque.com --load-delay=2000
