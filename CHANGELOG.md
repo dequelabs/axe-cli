@@ -1,3 +1,15 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/dequelabs/axe-cli/compare/v2.1.0-alpha.1...v3.0.0) (2018-03-28)
+
+
+### Features
+
+* Update to [axe-core 3.0.0](https://github.com/dequelabs/axe-core/releases/tag/v3.0.0)
+* Add --load-delay option to delay audit after page loads ([#53](https://github.com/dequelabs/axe-cli/issues/53)) ([c0659a8](https://github.com/dequelabs/axe-cli/commit/c0659a8))
+* Upgrade chromedriver to support Chrome 65 ([e4d4bd1](https://github.com/dequelabs/axe-cli/commit/e4d4bd1))
+
+
+
 <a name="2.1.0-alpha.1"></a>
 # [2.1.0-alpha.1](https://github.com/dequelabs/axe-cli/compare/v2.1.0-alpha.0...v2.1.0-alpha.1) (2018-02-21)
 
