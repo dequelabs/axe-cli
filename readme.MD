@@ -43,7 +43,7 @@ In case you want to disable some rules, you can use `--disable` followed by a li
 
 This option can be combined with either `--tags` or `--rules`.
 
-A list of rules and what tags they have is available at: https://dequeuniversity.com/rules/worldspace/2.0/.
+A list of rules and what tags they have is available at: https://dequeuniversity.com/rules/worldspace/3.0/.
 
 ## Saving the results
 
