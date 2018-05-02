@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "chai": "^4.0.0",
-    "mocha": "^3.4.2",
+    "mocha": "^5.1.0",
     "node-static": "^0.7.10",
     "snyk": "^1.41.1"
   },
