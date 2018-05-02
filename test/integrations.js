@@ -36,35 +36,32 @@ describe('integrations', function () {
     urls = ['http://localhost:8182/test/testpage.html']
   })
 
-  afterEach(function (done) {
+  afterEach(async () => {
     stopDriver(program)
 
     var service = chrome.getDefaultService()
     if (service.isRunning()) {
-      service.stop().then(() => {
-        // An unfortunately hacky way to clean up
-        // the service. Stop will shut it down,
-        // but it doesn't reset the local state
-        service.address_ = null;
-        chrome.setDefaultService(null);
-        done()
-      })
-    } else {
-      done()
+      await service.stop()
+
+      // An unfortunately hacky way to clean up
+      // the service. Stop will shut it down,
+      // but it doesn't reset the local state
+      service.address_ = null;
+      chrome.setDefaultService(null);
     }
   })
 
-  it('finds results in light and shadow DOM', function () {
+  it('finds results in light and shadow DOM', async () => {
     var listResult
-    return axeTestUrls(urls, program, {
+    await axeTestUrls(urls, program, {
       onTestComplete: function (results) {
         listResult = results.violations.find(result => result.id === 'list')
         assert.lengthOf(listResult.nodes, 2);
         assert.deepEqual(listResult.nodes[0].target, ['#list'])
         assert.deepEqual(listResult.nodes[1].target, [['#shadow-root', '#shadow-list']])
       }
-    }).then(function () {
-      assert.isDefined(listResult)
     })
+
+    assert.isDefined(listResult)
   })
 })
