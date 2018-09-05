@@ -15,7 +15,8 @@ jobs:
       - run: npm install
       - save_cache:
           key: v1-npm-cache-{{ checksum "package-lock.json" }}
-          path: node_modules
+          paths:
+            - node_modules
   tests:
     <<: *defaults
     steps:
