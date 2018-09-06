@@ -10,7 +10,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: node -v && npm -v
       - restore_cache:
           key: v1-npm-cache-{{ checksum "package-lock.json" }}
       - run: npm install
