@@ -1,0 +1,49 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:8-browsers
+  working_directory: ~/axe-cli
+
+jobs:
+  dependencies:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+  tests:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+      - run: npm test
+
+  release:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: npm config set "//registry.npmjs.org/:_authToken" $NPM_AUTH
+      - run: npm publish
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - dependencies
+      - tests:
+          requires:
+            - dependencies
+      - release:
+          requires:
+            - dependencies
+            - tests
+          filters:
+            branches:
+              only: master
