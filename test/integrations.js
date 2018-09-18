@@ -13,26 +13,27 @@ var {startDriver, stopDriver} = require('../lib/webdriver')
 describe('integrations', function () {
   var program, urls, server;
 
-  before(function () {
+  before(function (done) {
     // Start a server
     var file = new nodeStatic.Server('.');
     server = http.createServer(function (request, response) {
       request.addListener('end', function () {
         file.serve(request, response);
+        
       }).resume();
     })
-    server.listen(8182);
+    server.listen(8182, done);
   })
 
   after(function () {
     server.close();
   })
 
-  beforeEach(function () {
+  beforeEach(function (done) {
     program = {
       browser: 'chrome-headless'
     }
-    startDriver(program)
+    startDriver(program).then(done, done)
     urls = ['http://localhost:8182/test/testpage.html']
   })
 
