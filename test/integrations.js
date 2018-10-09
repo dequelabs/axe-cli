@@ -29,11 +29,11 @@ describe('integrations', function () {
     server.close();
   })
 
-  beforeEach(function (done) {
+  beforeEach(async function () {
     program = {
       browser: 'chrome-headless'
     }
-    startDriver(program).then(done, done)
+    await startDriver(program)
     urls = ['http://localhost:8182/test/testpage.html']
   })
 
