@@ -13,16 +13,15 @@ var {startDriver, stopDriver} = require('../lib/webdriver')
 describe('integrations', function () {
   var program, urls, server;
 
-  before(function (done) {
+  before(function () {
     // Start a server
     var file = new nodeStatic.Server('.');
     server = http.createServer(function (request, response) {
       request.addListener('end', function () {
         file.serve(request, response);
-        
       }).resume();
     })
-    server.listen(8182, done);
+    server.listen(8182);
   })
 
   after(function () {
