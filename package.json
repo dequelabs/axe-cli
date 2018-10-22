@@ -1,52 +1,109 @@
 {
-  "name": "axe-cli",
-  "version": "3.0.0",
-  "description": "A CLI for accessibility testing using axe-core",
-  "main": "index.js",
-  "engines": {
-    "node": ">=6"
-  },
-  "scripts": {
-    "test": "mocha test/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dequelabs/axe-cli.git"
-  },
-  "keywords": [
-    "axe-core",
-    "accessibility",
-    "a11y",
-    "wcag",
-    "cli",
-    "testing"
-  ],
-  "author": {
-    "name": "Wilco Fiers",
-    "organization": "Deque Systems, Inc.",
-    "url": "http://github.com/wilcofiers/"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dequelabs/axe-cli/issues"
-  },
-  "bin": {
-    "axe": "axe-cli"
-  },
-  "homepage": "https://github.com/dequelabs/axe-cli#readme",
-  "dependencies": {
-    "axe-core": "^3.0.0",
-    "axe-webdriverjs": "^2.0.0",
-    "chromedriver": "^2.36.0",
-    "colors": "^1.1.2",
-    "commander": "^2.9.0",
-    "selenium-webdriver": "^3.5.0"
-  },
-  "devDependencies": {
-    "chai": "^4.0.0",
-    "mocha": "^5.1.0",
-    "node-static": "^0.7.10",
-    "snyk": "^1.95.3"
-  },
-  "snyk": true
+	"name": "axe-cli",
+	"version": "3.0.0",
+	"description": "A CLI for accessibility testing using axe-core",
+	"main": "index.js",
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "mocha test/*.js",
+		"lint": "eslint .",
+		"fmt": "prettier --write *.{js,json,md} lib/*.js test/*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dequelabs/axe-cli.git"
+	},
+	"keywords": [
+		"axe-core",
+		"accessibility",
+		"a11y",
+		"wcag",
+		"cli",
+		"testing"
+	],
+	"author": {
+		"name": "Wilco Fiers",
+		"organization": "Deque Systems, Inc.",
+		"url": "http://github.com/wilcofiers/"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dequelabs/axe-cli/issues"
+	},
+	"bin": {
+		"axe": "axe-cli"
+	},
+	"homepage": "https://github.com/dequelabs/axe-cli#readme",
+	"dependencies": {
+		"axe-core": "^3.0.0",
+		"axe-webdriverjs": "^2.0.0",
+		"chromedriver": "^2.36.0",
+		"colors": "^1.1.2",
+		"commander": "^2.9.0",
+		"selenium-webdriver": "^3.5.0"
+	},
+	"devDependencies": {
+		"chai": "^4.0.0",
+		"eslint": "^5.7.0",
+		"eslint-config-prettier": "^3.1.0",
+		"husky": "^1.1.2",
+		"lint-staged": "^7.3.0",
+		"mocha": "^5.1.0",
+		"node-static": "^0.7.10",
+		"prettier": "^1.14.3",
+		"snyk": "^1.95.3"
+	},
+	"snyk": true,
+	"prettier": {
+		"semi": true,
+		"singleQuote": true,
+		"printWidth": 80,
+		"bracketSpacing": true,
+		"useTabs": true,
+		"trailingComma": "none",
+		"arrowParens": "avoid"
+	},
+	"lint-staged": {
+		"*.{md,json}": [
+			"prettier --write",
+			"git add"
+		],
+		"*.js": [
+			"eslint --fix",
+			"prettier --write",
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"eslintConfig": {
+		"extends": [
+			"eslint:recommended",
+			"prettier"
+		],
+		"env": {
+			"es6": true,
+			"node": true,
+			"browser": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2017
+		},
+		"rules": {
+			"no-console": "off"
+		},
+		"overrides": [
+			{
+				"files": "test/*.js",
+				"env": {
+					"mocha": true
+				}
+			}
+		]
+	}
 }
