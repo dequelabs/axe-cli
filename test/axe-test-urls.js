@@ -56,10 +56,10 @@ describe('testPages', function () {
 
 		await testPages(['http://foo'], config, {})
 
-		assert.include(
-			asyncScripts[0].toString(),
-			'.innerHTML = \'document.documentElement.classList.add("deque-axe-is-ready");\''
-		)
+		assert.equal(asyncScripts.length, 2)
+		const [script]=asyncScripts
+		assert.match(script, /script\.innerHTML\s*=[\s\S]*['"]document\.documentElement\.classList\.add\(['"]deque-axe-is-ready/)
+
 		assert.equal(waitCalls, 1)
 	})
 
