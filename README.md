@@ -20,11 +20,15 @@ Lastly, install the webdrivers of the browsers you wish to use. A webdriver is a
 
 After installing, you can now run the `axe` command in your CLI, followed by the URL of the page you wish to test:
 
-	axe https://www.deque.com
+```
+axe https://www.deque.com
+```
 
 You can run multiple pages at once, simply add more URLs to the command. Keep in mind that axe-cli is not a crawler, so if you find yourself testing dozens of pages at once, you may want to consider switching over to something like [axe-webdriverjs](https://www.npmjs.com/package/axe-webdriverjs). If you do not specify the protocol, http will be used by default:
 
-	axe www.deque.com, dequeuniversity.com
+```
+axe www.deque.com, dequeuniversity.com
+```
 
 **Note:** If you are having difficulty with the color scheme, use `--no-color` to disable text styles.
 
@@ -32,16 +36,21 @@ You can run multiple pages at once, simply add more URLs to the command. Keep in
 
 You can use the `--rules` flag to set which rules you wish to run, or you can use `--tags` to tell axe to run all rules that have that specific tag. For example:
 
-	axe www.deque.com --rules color-contrast,html-has-lang
+```
+axe www.deque.com --rules color-contrast,html-has-lang
+```
 
 Or, to run all wcag2a rules:
 
-	axe www.deque.com --tags wcag2a
-
+```
+axe www.deque.com --tags wcag2a
+```
 
 In case you want to disable some rules, you can use `--disable` followed by a list of rules. These will be skipped when analyzing the site:
 
-    axe www.deque.com --disable color-contrast
+```
+axe www.deque.com --disable color-contrast
+```
 
 This option can be combined with either `--tags` or `--rules`.
 
@@ -51,17 +60,23 @@ A list of rules and what tags they have is available at: https://dequeuniversity
 
 Results can be saved as JSON data, using the `--save` and `--dir` flags. By passing a filename to `--save` you indicate how the file should be called. If no filename is passed, a default will be used. For example:
 
-	axe www.deque.com --save deque-site.json
+```
+axe www.deque.com --save deque-site.json
+```
 
 Or:
 
-	axe www.deque.com --dir ./axe-results/
+```
+axe www.deque.com --dir ./axe-results/
+```
 
 ## Defining the scope of a test
 
 If you want to only test a specific area of a page, or wish to exclude some part of a page you can do so using the `--include` and `--exclude` flags and pass it a CSS seletor:
 
-	axe www.deque.com --include #main --exclude #aside
+```
+axe www.deque.com --include #main --exclude #aside
+```
 
 ## Custom axe-core versions
 
@@ -69,7 +84,9 @@ Axe-cli will look for locally available versions of axe-core. If the directory f
 
 To specify the exact file axe-core file axe-cli should use, you can use the `--axe-source` flag (`-a` for short), with a relative or absolute path to the file.
 
-  axe www.deque.com --axe-source ./axe.nl.js
+```
+axe www.deque.com --axe-source ./axe.nl.js
+```
 
 ## Different browsers
 
@@ -77,28 +94,38 @@ Axe-cli can run in a variety of web browsers. By default axe-cli uses Chrome in 
 
 To run axe-cli using another browser, pass it in as the `--browser` option:
 
-	axe www.deque.com --browser chrome
+```
+axe www.deque.com --browser chrome
+```
 
 Or for short:
 
-	axe www.deque.com -b c
+```
+axe www.deque.com -b c
+```
 
 ## CI integration
 
-Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.  
+Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.
 
 Use the `--exit` flag, `-q` for short, to have the axe-cli process exit with a failure code `1` when any rule fails to pass.
 
-	axe www.deque.com --exit
+```
+axe www.deque.com --exit
+```
 
 ## Timing and timeout
 
 For debugging and managing timeouts, there are two options available. With `--timer` set, axe-cli will log how long it takes to load the page, and how long it takes to run axe-core. If you find the execution of axe-core takes too long, which can happen on very large pages, use `--timeout` to increase the time axe has to test that page:
 
-	axe www.cnn.com --timeout=120
+```
+axe www.cnn.com --timeout=120
+```
 
 ## Delay audit to ensure page is loaded
 
 If you find your page is not ready after axe has determined it has loaded, you can use `--load-delay` followed by a number in milliseconds. This will make axe wait that time before running the audit after the page has loaded.
 
-    axe www.deque.com --load-delay=2000
+```
+axe www.deque.com --load-delay=2000
+```
