@@ -7,7 +7,9 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "mocha test/*.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,13 +42,13 @@
     "chromedriver": "^2.36.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "selenium-webdriver": "^3.5.0"
+    "selenium-webdriver": "^3.5.0",
+    "snyk": "^1.123.0"
   },
   "devDependencies": {
     "chai": "^4.0.0",
     "mocha": "^3.4.2",
-    "node-static": "^0.7.10",
-    "snyk": "^1.41.1"
+    "node-static": "^0.7.10"
   },
   "snyk": true
 }
