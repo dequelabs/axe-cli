@@ -104,6 +104,16 @@ Or for short:
 axe www.deque.com -b c
 ```
 
+## Custom Chrome Flags
+
+When using the Headless Chrome browser, you may provide any number of [flags to configure how the browser functions](https://peter.sh/experiments/chromium-command-line-switches/).
+
+Options are passed by name, without their leading `--` prefix. For example, to provide the `--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage` flags to the Chrome binary, you'd do:
+
+```
+axe --chrome-options="no-sandbox,disable-setuid-sandbox,disable-dev-shm-usage" www.deque.com
+```
+
 ## CI integration
 
 Axe-cli can be ran within the CI tooling for your project. Many tools are automatically configured to halt/fail builds when a process exits with a code of `1`.
