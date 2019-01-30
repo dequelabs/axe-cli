@@ -70,6 +70,28 @@ Or:
 axe www.deque.com --dir ./axe-results/
 ```
 
+## Sending results to STDOUT
+
+To output the test results to STDOUT, provide the `--stdout` flag. This flag has the side-effect of silencing all other logs/output (other than errors, which are written to STDERR).
+
+To print the entire result object to your terminal, do:
+
+```
+axe --stdout www.deque.com
+```
+
+To pipe the results to a file, do:
+
+```
+axe --stdout www.deque.com > your_file.json
+```
+
+To pipe the results to a JSON-parsing program for further processing, do:
+
+```
+axe --stdout www.deque.com | jq ".[0].violations"
+```
+
 ## Defining the scope of a test
 
 If you want to only test a specific area of a page, or wish to exclude some part of a page you can do so using the `--include` and `--exclude` flags and pass it a CSS seletor:

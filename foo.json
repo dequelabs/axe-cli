@@ -1,0 +1,4266 @@
+[
+	{
+		"inapplicable": [
+			{
+				"description": "Ensures every accesskey attribute value is unique",
+				"help": "accesskey attribute value must be unique",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/accesskeys?application=webdriverjs",
+				"id": "accesskeys",
+				"impact": null,
+				"nodes": [],
+				"tags": ["best-practice", "cat.keyboard"]
+			},
+			{
+				"description": "Ensures <area> elements of image maps have alternate text",
+				"help": "Active <area> elements must have alternate text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/area-alt?application=webdriverjs",
+				"id": "area-alt",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag111",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures unsupported DPUB roles are only used on elements with implicit fallback roles",
+				"help": "Unsupported DPUB ARIA roles should be used on elements with implicit fallback roles",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-dpub-role-fallback?application=webdriverjs",
+				"id": "aria-dpub-role-fallback",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.aria", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures <blink> elements are not used",
+				"help": "<blink> elements are deprecated and must not be used",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/blink?application=webdriverjs",
+				"id": "blink",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.time-and-media",
+					"wcag2a",
+					"wcag222",
+					"section508",
+					"section508.22.j"
+				]
+			},
+			{
+				"description": "Ensures related <input type=\"checkbox\"> elements have a group and that the group designation is consistent",
+				"help": "Checkbox inputs with the same name attribute value must be part of a group",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/checkboxgroup?application=webdriverjs",
+				"id": "checkboxgroup",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.forms", "best-practice"]
+			},
+			{
+				"description": "Ensures <dl> elements are structured correctly",
+				"help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script> or <template> elements",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/definition-list?application=webdriverjs",
+				"id": "definition-list",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.structure", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures <dt> and <dd> elements are contained by a <dl>",
+				"help": "<dt> and <dd> elements must be contained by a <dl>",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/dlitem?application=webdriverjs",
+				"id": "dlitem",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.structure", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures headings have discernible text",
+				"help": "Headings must not be empty",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/empty-heading?application=webdriverjs",
+				"id": "empty-heading",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.name-role-value", "best-practice"]
+			},
+			{
+				"description": "Ensures <iframe> and <frame> elements contain the axe-core script",
+				"help": "Frames must be tested with axe-core",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/frame-tested?application=webdriverjs",
+				"id": "frame-tested",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.structure", "review-item"]
+			},
+			{
+				"description": "Ensures <iframe> and <frame> elements contain a unique title attribute",
+				"help": "Frames must have a unique title attribute",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/frame-title-unique?application=webdriverjs",
+				"id": "frame-title-unique",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.text-alternatives", "best-practice"]
+			},
+			{
+				"description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
+				"help": "Frames must have title attribute",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/frame-title?application=webdriverjs",
+				"id": "frame-title",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag241",
+					"wcag412",
+					"section508",
+					"section508.22.i"
+				]
+			},
+			{
+				"description": "Ensures the order of headings is semantically correct",
+				"help": "Heading levels should only increase by one",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application=webdriverjs",
+				"id": "heading-order",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+				"help": "HTML elements with lang and xml:lang must have the same base language",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/html-xml-lang-mismatch?application=webdriverjs",
+				"id": "html-xml-lang-mismatch",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.language", "wcag2a", "wcag311"]
+			},
+			{
+				"description": "Ensures <input type=\"image\"> elements have alternate text",
+				"help": "Image buttons must have alternate text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/input-image-alt?application=webdriverjs",
+				"id": "input-image-alt",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag111",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures the banner landmark is at top level",
+				"help": "Banner landmark must not be contained in another landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-banner-is-top-level?application=webdriverjs",
+				"id": "landmark-banner-is-top-level",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures the contentinfo landmark is at top level",
+				"help": "Contentinfo landmark must not be contained in another landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-contentinfo-is-top-level?application=webdriverjs",
+				"id": "landmark-contentinfo-is-top-level",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures the main landmark is at top level",
+				"help": "Main landmark must not be contained in another landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-main-is-top-level?application=webdriverjs",
+				"id": "landmark-main-is-top-level",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures presentational <table> elements do not use <th>, <caption> elements or the summary attribute",
+				"help": "Layout tables must not use data table elements",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/layout-table?application=webdriverjs",
+				"id": "layout-table",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.semantics", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures that lists are structured correctly",
+				"help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/list?application=webdriverjs",
+				"id": "list",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.structure", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures <li> elements are used semantically",
+				"help": "<li> elements must be contained in a <ul> or <ol>",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/listitem?application=webdriverjs",
+				"id": "listitem",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.structure", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures <marquee> elements are not used",
+				"help": "<marquee> elements are deprecated and must not be used",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/marquee?application=webdriverjs",
+				"id": "marquee",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.parsing", "wcag2a", "wcag222"]
+			},
+			{
+				"description": "Ensures <meta http-equiv=\"refresh\"> is not used",
+				"help": "Timed refresh must not exist",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-refresh?application=webdriverjs",
+				"id": "meta-refresh",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.time",
+					"wcag2a",
+					"wcag2aaa",
+					"wcag221",
+					"wcag224",
+					"wcag325"
+				]
+			},
+			{
+				"description": "Ensures <meta name=\"viewport\"> can scale a significant amount",
+				"help": "Users should be able to zoom and scale the text up to 500%",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport-large?application=webdriverjs",
+				"id": "meta-viewport-large",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.sensory-and-visual-cues", "best-practice"]
+			},
+			{
+				"description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+				"help": "Zooming and scaling must not be disabled",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=webdriverjs",
+				"id": "meta-viewport",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.sensory-and-visual-cues", "wcag2aa", "wcag144"]
+			},
+			{
+				"description": "Ensures <object> elements have alternate text",
+				"help": "<object> elements must have alternate text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/object-alt?application=webdriverjs",
+				"id": "object-alt",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag111",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures related <input type=\"radio\"> elements have a group and that the group designation is consistent",
+				"help": "Radio inputs with the same name attribute value must be part of a group",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/radiogroup?application=webdriverjs",
+				"id": "radiogroup",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.forms", "best-practice"]
+			},
+			{
+				"description": "Ensures the scope attribute is used correctly on tables",
+				"help": "scope attribute should be used correctly",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/scope-attr-valid?application=webdriverjs",
+				"id": "scope-attr-valid",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.tables", "best-practice"]
+			},
+			{
+				"description": "Ensures that server-side image maps are not used",
+				"help": "Server-side image maps must not be used",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/server-side-image-map?application=webdriverjs",
+				"id": "server-side-image-map",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag211",
+					"section508",
+					"section508.22.f"
+				]
+			},
+			{
+				"description": "Ensure all skip links have a focusable target",
+				"help": "The skip-link target should exist and be focusable",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/skip-link?application=webdriverjs",
+				"id": "skip-link",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.keyboard", "best-practice"]
+			},
+			{
+				"description": "Ensure that tables do not have the same summary and caption",
+				"help": "The <caption> element should not contain the same text as the summary attribute",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/table-duplicate-name?application=webdriverjs",
+				"id": "table-duplicate-name",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.tables", "best-practice"]
+			},
+			{
+				"description": "Ensure that each cell in a table using the headers refers to another cell in that table",
+				"help": "All cells in a table element that use the headers attribute must only refer to other cells of that same table",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/td-headers-attr?application=webdriverjs",
+				"id": "td-headers-attr",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.tables",
+					"wcag2a",
+					"wcag131",
+					"section508",
+					"section508.22.g"
+				]
+			},
+			{
+				"description": "Ensure that each table header in a data table refers to data cells",
+				"help": "All th elements and elements with role=columnheader/rowheader must have data cells they describe",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/th-has-data-cells?application=webdriverjs",
+				"id": "th-has-data-cells",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.tables",
+					"wcag2a",
+					"wcag131",
+					"section508",
+					"section508.22.g"
+				]
+			},
+			{
+				"description": "Ensures lang attributes have valid values",
+				"help": "lang attribute must have a valid value",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/valid-lang?application=webdriverjs",
+				"id": "valid-lang",
+				"impact": null,
+				"nodes": [],
+				"tags": ["cat.language", "wcag2aa", "wcag312"]
+			},
+			{
+				"description": "Ensures <video> elements have captions",
+				"help": "<video> elements must have captions",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption?application=webdriverjs",
+				"id": "video-caption",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag122",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures <video> elements have audio descriptions",
+				"help": "<video> elements must have an audio description track",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-description?application=webdriverjs",
+				"id": "video-description",
+				"impact": null,
+				"nodes": [],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2aa",
+					"wcag125",
+					"section508",
+					"section508.22.b"
+				]
+			}
+		],
+		"incomplete": [
+			{
+				"description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+				"help": "Elements must have sufficient color contrast",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=webdriverjs",
+				"id": "color-contrast",
+				"impact": "serious",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"contrastRatio": 0,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#ffffff",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal",
+									"missingData": "shortTextContent"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element content is too short to determine if it is actual text content",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"TSPr2b qosSob\" aria-hidden=\"true\">.<b>.</b></div>",
+						"impact": "serious",
+						"none": [],
+						"target": [".TSPr2b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"contrastRatio": 0,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#ffffff",
+									"fontSize": "9.8pt",
+									"fontWeight": "bold",
+									"missingData": "shortTextContent"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element content is too short to determine if it is actual text content",
+								"relatedNodes": []
+							}
+						],
+						"html": "<b>.</b>",
+						"impact": "serious",
+						"none": [],
+						"target": ["b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"contrastRatio": 0,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#ffffff",
+									"fontSize": "9.8pt",
+									"fontWeight": "bold",
+									"missingData": "bgGradient"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element's background color could not be determined due to a background gradient",
+								"relatedNodes": [
+									{
+										"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+										"target": ["#gb_70"]
+									}
+								]
+							}
+						],
+						"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+						"impact": "serious",
+						"none": [],
+						"target": ["#gb_70"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"contrastRatio": 0,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#757575",
+									"fontSize": "9.8pt",
+									"fontWeight": "bold",
+									"missingData": "bgGradient"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element's background color could not be determined due to a background gradient",
+								"relatedNodes": [
+									{
+										"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+										"target": [
+											".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+										]
+									}
+								]
+							}
+						],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": "serious",
+						"none": [],
+						"target": [
+							".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"contrastRatio": 0,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#757575",
+									"fontSize": "9.8pt",
+									"fontWeight": "bold",
+									"missingData": "bgGradient"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element's background color could not be determined due to a background gradient",
+								"relatedNodes": [
+									{
+										"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+										"target": ["#gbqfbb"]
+									}
+								]
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": "serious",
+						"none": [],
+						"target": ["#gbqfbb"]
+					}
+				],
+				"tags": ["cat.color", "wcag2aa", "wcag143"]
+			}
+		],
+		"passes": [
+			{
+				"description": "Ensures ARIA attributes are allowed for an element's role",
+				"help": "Elements must only use allowed ARIA attributes",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-attr?application=webdriverjs",
+				"id": "aria-allowed-attr",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": [
+							".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbqfbb"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-attr",
+								"impact": "critical",
+								"message": "ARIA attributes are used correctly for the defined role",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures role attribute has an appropriate value for the element",
+				"help": "ARIA role must be appropriate for the element",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application=webdriverjs",
+				"id": "aria-allowed-role",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"gb_ca gb_ba gb_pa\" aria-label=\"Google apps\" aria-hidden=\"true\" role=\"region\">",
+						"impact": null,
+						"none": [],
+						"target": [".gb_ca"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<ul class=\"erkvQe\" jsname=\"erkvQe\" role=\"listbox\"></ul>",
+						"impact": null,
+						"none": [],
+						"target": [".erkvQe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<li data-view-type=\"1\" class=\"sbct\" id=\"sbt\" role=\"presentation\"><div class=\"sbtc\" role=\"option\"><div class=\"sbl1\"><span></span></div></div><div class=\"sbab\"><div class=\"sbai\">Remove</div></div></li>",
+						"impact": null,
+						"none": [],
+						"target": ["#sbt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"sbtc\" role=\"option\"><div class=\"sbl1\"><span></span></div></div>",
+						"impact": null,
+						"none": [],
+						"target": [".sbtc"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"gbqfba gbqfba-hvr\" role=\"button\" style=\"display: none; font-family: arial, sans-serif; overflow: hidden; text-align: center; z-index: 50;\">",
+						"impact": null,
+						"none": [],
+						"target": [".gbqfba"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span id=\"fsett\" aria-labelledby=\"fsettl\" role=\"menu\" style=\"display:none\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsett"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"https://www.google.com/preferences?hl=en&amp;fg=1\" role=\"menuitem\">Search settings</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[role=\"menuitem\"]:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"/advanced_search?hl=en&amp;fg=1\" role=\"menuitem\">Advanced search</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[href=\"/advanced_search?hl=en&fg=1\"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"/history/privacyadvisor/search?utm_source=googlemenu&amp;fg=1\" role=\"menuitem\">Your data in Search</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[role=\"menuitem\"]:nth-child(3)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"/history/optout?hl=en&amp;fg=1\" role=\"menuitem\">History</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[href=\"/history/optout?hl=en&fg=1\"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"//support.google.com/websearch/?p=ws_results_help&amp;hl=en&amp;fg=1\" role=\"menuitem\">Search Help</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[role=\"menuitem\"]:nth-child(5)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-allowed-role",
+								"impact": "minor",
+								"message": "ARIA role is allowed for given element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"#\" data-bucket=\"websearch\" role=\"menuitem\" id=\"dk2qOd\" target=\"_blank\" jsaction=\"gf.sf\" data-ved=\"0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQLggP\">Send feedback</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#dk2qOd"]
+					}
+				],
+				"tags": ["cat.aria", "best-practice"]
+			},
+			{
+				"description": "Ensures aria-hidden='true' is not present on the document body.",
+				"help": "aria-hidden='true' must not be present on the document body",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-hidden-body?application=webdriverjs",
+				"id": "aria-hidden-body",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-hidden-body",
+								"impact": "critical",
+								"message": "No aria-hidden attribute is present on document body",
+								"relatedNodes": []
+							}
+						],
+						"html": "<body class=\"hp vasq\" id=\"gsr\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gsr"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures elements with ARIA roles have all required ARIA attributes",
+				"help": "Required ARIA attributes must be provided",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-required-attr?application=webdriverjs",
+				"id": "aria-required-attr",
+				"impact": "critical",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-attr",
+								"impact": "critical",
+								"message": "All required ARIA attributes are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-attr",
+								"impact": "critical",
+								"message": "All required ARIA attributes are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-attr",
+								"impact": "critical",
+								"message": "All required ARIA attributes are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-attr",
+								"impact": "critical",
+								"message": "All required ARIA attributes are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures elements with an ARIA role that require child roles contain them",
+				"help": "Certain ARIA roles must contain particular children",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-required-children?application=webdriverjs",
+				"id": "aria-required-children",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-children",
+								"impact": "critical",
+								"message": "Required ARIA children are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-children",
+								"impact": "critical",
+								"message": "Required ARIA children are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-children",
+								"impact": "critical",
+								"message": "Required ARIA children are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-children",
+								"impact": "critical",
+								"message": "Required ARIA children are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-children",
+								"impact": "critical",
+								"message": "Required ARIA children are present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+				"help": "Certain ARIA roles must be contained by particular parents",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-required-parent?application=webdriverjs",
+				"id": "aria-required-parent",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-parent",
+								"impact": "critical",
+								"message": "Required ARIA parent role present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-parent",
+								"impact": "critical",
+								"message": "Required ARIA parent role present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-parent",
+								"impact": "critical",
+								"message": "Required ARIA parent role present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-parent",
+								"impact": "critical",
+								"message": "Required ARIA parent role present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-required-parent",
+								"impact": "critical",
+								"message": "Required ARIA parent role present",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag131"]
+			},
+			{
+				"description": "Ensures all elements with a role attribute use a valid value",
+				"help": "ARIA roles used must conform to valid values",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-roles?application=webdriverjs",
+				"id": "aria-roles",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "invalidrole",
+								"impact": "critical",
+								"message": "ARIA role is valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "abstractrole",
+								"impact": "serious",
+								"message": "Abstract roles are not used",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "unsupportedrole",
+								"impact": "critical",
+								"message": "ARIA role is supported",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "invalidrole",
+								"impact": "critical",
+								"message": "ARIA role is valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "abstractrole",
+								"impact": "serious",
+								"message": "Abstract roles are not used",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "unsupportedrole",
+								"impact": "critical",
+								"message": "ARIA role is supported",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "invalidrole",
+								"impact": "critical",
+								"message": "ARIA role is valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "abstractrole",
+								"impact": "serious",
+								"message": "Abstract roles are not used",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "unsupportedrole",
+								"impact": "critical",
+								"message": "ARIA role is supported",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "invalidrole",
+								"impact": "critical",
+								"message": "ARIA role is valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "abstractrole",
+								"impact": "serious",
+								"message": "Abstract roles are not used",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "unsupportedrole",
+								"impact": "critical",
+								"message": "ARIA role is supported",
+								"relatedNodes": []
+							}
+						],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "invalidrole",
+								"impact": "critical",
+								"message": "ARIA role is valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "abstractrole",
+								"impact": "serious",
+								"message": "Abstract roles are not used",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "unsupportedrole",
+								"impact": "critical",
+								"message": "ARIA role is supported",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures all ARIA attributes have valid values",
+				"help": "ARIA attributes must conform to valid values",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-valid-attr-value?application=webdriverjs",
+				"id": "aria-valid-attr-value",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": [
+							".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbqfbb"]
+					},
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "aria-valid-attr-value",
+								"impact": "critical",
+								"message": "ARIA attribute values are valid",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-errormessage",
+								"impact": "critical",
+								"message": "Uses a supported aria-errormessage technique",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures attributes that begin with aria- are valid ARIA attributes",
+				"help": "ARIA attributes must conform to valid names",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-valid-attr?application=webdriverjs",
+				"id": "aria-valid-attr",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": [
+							".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbqfbb"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-valid-attr",
+								"impact": "critical",
+								"message": "ARIA attribute name are valid",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+				"help": "autocomplete attribute must be used correctly",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/autocomplete-valid?application=webdriverjs",
+				"id": "autocomplete-valid",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "autocomplete-valid",
+								"impact": "serious",
+								"message": "the autocomplete attribute is correctly formatted",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "autocomplete-appropriate",
+								"impact": "serious",
+								"message": "the autocomplete value is on an appropriate element",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					}
+				],
+				"tags": ["cat.forms", "wcag21aa", "wcag135"]
+			},
+			{
+				"description": "Ensures buttons have discernible text",
+				"help": "Buttons must have discernible text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/button-name?application=webdriverjs",
+				"id": "button-name",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "Google apps",
+								"id": "button-has-visible-text",
+								"impact": "critical",
+								"message": "Element has inner text that is visible to screen readers",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "non-empty-title",
+								"impact": "serious",
+								"message": "Element has a title attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "Search by voice",
+								"id": "button-has-visible-text",
+								"impact": "critical",
+								"message": "Element has inner text that is visible to screen readers",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-label",
+								"impact": "serious",
+								"message": "aria-label attribute exists and is not empty",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "non-empty-value",
+								"impact": "critical",
+								"message": "Element has a non-empty value attribute",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-label",
+								"impact": "serious",
+								"message": "aria-label attribute exists and is not empty",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": [
+							".FPdoLc > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "non-empty-value",
+								"impact": "critical",
+								"message": "Element has a non-empty value attribute",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "aria-label",
+								"impact": "serious",
+								"message": "aria-label attribute exists and is not empty",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#gbqfbb"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "Settings",
+								"id": "button-has-visible-text",
+								"impact": "critical",
+								"message": "Element has inner text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsettl"]
+					}
+				],
+				"tags": [
+					"cat.name-role-value",
+					"wcag2a",
+					"wcag412",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+				"help": "Elements must have sufficient color contrast",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=webdriverjs",
+				"id": "color-contrast",
+				"impact": "serious",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 10.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#404040",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 10.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"/intl/en/about/?fg=1&amp;utm_source=google-US&amp;utm_medium=referral&amp;utm_campaign=hp-header\" onmousedown=\"return rwt(this,'','','','','AOvVaw1QHjdlDLdIC6vxB44RfcSD','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkNQCCAM','','',event)\">About</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#hptl > a:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 10.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#404040",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 10.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"https://store.google.com/?utm_source=hp_header&amp;utm_medium=google_oo&amp;utm_campaign=GS100042\" onmousedown=\"return rwt(this,'','','','','AOvVaw0klweobGSi20iSKV1DeFH9','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQpMwCCAQ','','',event)\">Store</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#hptl > a:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 16.07,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#212121",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 16.07",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_P\" data-pid=\"23\" href=\"https://mail.google.com/mail/?tab=wm\">Gmail</a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_P[data-pid=\"\\32 3\"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 16.07,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#212121",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 16.07",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_P\" data-pid=\"2\" href=\"https://www.google.com/imghp?hl=en&amp;tab=wi\">Images</a>",
+						"impact": null,
+						"none": [],
+						"target": ["a[data-pid=\"\\32 \"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 16.07,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#212121",
+									"fontSize": "12.0pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 16.07",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [],
+						"target": [".gLFyf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": null,
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"Google Search\" aria-label=\"Google Search\" name=\"btnK\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": [
+							"div[jsname=\"VlcLAe\"] > center > input[value=\"Google\\ Search\"][aria-label=\"Google\\ Search\"][name=\"btnK\"]"
+						]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": null,
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" name=\"btnI\" type=\"submit\" jsaction=\"sf.lck\">",
+						"impact": null,
+						"none": [],
+						"target": ["input[jsaction=\"sf\\.lck\"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 15.9,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#222222",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 15.9",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span>How an activist uses Search to create opportunity in the DR Congo. </span>",
+						"impact": null,
+						"none": [],
+						"target": [".szppmdbYutt__middle-slot-promo > span"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#ffffff",
+									"contrastRatio": 12.42,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#1a0dab",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 12.42",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"NKcBbd\" href=\"https://www.google.com/url?q=https://www.google.com/about/stories/womenrising%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3DUSA&amp;source=hpp&amp;id=19010569&amp;ct=3&amp;usg=AFQjCNG54-cOYhc9I3TXD5FHMOVzXiZtGQ&amp;sa=X&amp;ved=0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8IcBCAk\" rel=\"nofollow\">",
+						"impact": null,
+						"none": [],
+						"target": [".NKcBbd"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#f2f2f2",
+									"contrastRatio": 5.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#5f6368",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 5.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/privacy/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw1Eu2HXBpFnmXCkPvEJJC_2','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8awCCAw','','',event)\">Privacy</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#fsr > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#f2f2f2",
+									"contrastRatio": 5.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#5f6368",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 5.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/terms/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3QPB5iVtcNuHWGnU6edD1k','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8qwCCA0','','',event)\">Terms</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#fsr > .Fx4vi:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#f2f2f2",
+									"contrastRatio": 5.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#5f6368",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 5.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#f2f2f2",
+									"contrastRatio": 5.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#5f6368",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 5.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3XLzhicA5ZZW0afDbW0l2T','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkdQCCBA','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsl > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": {
+									"bgColor": "#f2f2f2",
+									"contrastRatio": 5.4,
+									"expectedContrastRatio": "4.5:1",
+									"fgColor": "#5f6368",
+									"fontSize": "9.8pt",
+									"fontWeight": "normal"
+								},
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": "Element has sufficient color contrast of 5.4",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw2SJ4zwRVXKyZr53qG9dm4K','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQktQCCBE','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsl > .Fx4vi:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "color-contrast",
+								"impact": "serious",
+								"message": null,
+								"relatedNodes": []
+							}
+						],
+						"html": "<textarea class=\"csi\" name=\"csi\" style=\"display:none\"></textarea>",
+						"impact": null,
+						"none": [],
+						"target": ["textarea"]
+					}
+				],
+				"tags": ["cat.color", "wcag2aa", "wcag143"]
+			},
+			{
+				"description": "Ensures each HTML document contains a non-empty <title> element",
+				"help": "Documents must have <title> element to aid in navigation",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/document-title?application=webdriverjs",
+				"id": "document-title",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "doc-has-title",
+								"impact": "serious",
+								"message": "Document has a non-empty <title> element",
+								"relatedNodes": []
+							}
+						],
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": null,
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.text-alternatives", "wcag2a", "wcag242"]
+			},
+			{
+				"description": "Ensures every id attribute value of active elements is unique",
+				"help": "IDs of active elements must be unique",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-active?application=webdriverjs",
+				"id": "duplicate-id-active",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb_70",
+								"id": "duplicate-id-active",
+								"impact": "serious",
+								"message": "Document has no active elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb_70"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gbqfbb",
+								"id": "duplicate-id-active",
+								"impact": "serious",
+								"message": "Document has no active elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input value=\"I'm Feeling Lucky\" aria-label=\"I'm Feeling Lucky\" id=\"gbqfbb\" name=\"btnI\" type=\"submit\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbqfbb"]
+					}
+				],
+				"tags": ["cat.parsing", "wcag2a", "wcag411"]
+			},
+			{
+				"description": "Ensures every id attribute value used in ARIA and in labels is unique",
+				"help": "IDs used in ARIA and labels must be unique",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-aria?application=webdriverjs",
+				"id": "duplicate-id-aria",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fsettl",
+								"id": "duplicate-id-aria",
+								"impact": "critical",
+								"message": "Document has no elements referenced with ARIA or labels that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsettl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fsett",
+								"id": "duplicate-id-aria",
+								"impact": "critical",
+								"message": "Document has no elements referenced with ARIA or labels that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span id=\"fsett\" aria-labelledby=\"fsettl\" role=\"menu\" style=\"display:none\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsett"]
+					}
+				],
+				"tags": ["cat.parsing", "wcag2a", "wcag411"]
+			},
+			{
+				"description": "Ensures every id attribute value is unique",
+				"help": "id attribute value must be unique",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application=webdriverjs",
+				"id": "duplicate-id",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gsr",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<body class=\"hp vasq\" id=\"gsr\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gsr"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gstyle",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<style data-jiis=\"cc\" id=\"gstyle\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gstyle"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "viewport",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"ctr-p\" id=\"viewport\">",
+						"impact": null,
+						"none": [],
+						"target": ["#viewport"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "doc-info",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"doc-info\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#doc-info"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "cst",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"cst\">",
+						"impact": null,
+						"none": [],
+						"target": ["#cst"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "searchform",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"jhp\" id=\"searchform\">",
+						"impact": null,
+						"none": [],
+						"target": ["#searchform"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"gb\" class=\"gb_hg\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "hptl",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"hptl\">",
+						"impact": null,
+						"none": [],
+						"target": ["#hptl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gbw",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"gbw\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbw"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gbsfw",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"gb_ba\" id=\"gbsfw\" style=\"background-color:#eee;min-width:376px\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#gbsfw"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gbwa",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"gb_9 gb_vd gb_R\" data-ogsr-alt=\"\" id=\"gbwa\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gbwa"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb192",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"192\" draggable=\"false\" href=\"https://myaccount.google.com/?utm_source=OGB&amp;utm_medium=app\" id=\"gb192\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb192"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb1",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"1\" draggable=\"false\" href=\"https://www.google.com/webhp?tab=ww\" id=\"gb1\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -1311px\"></span><span class=\"gb_Z\">Search</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb1"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb8",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"8\" draggable=\"false\" href=\"https://maps.google.com/maps?hl=en&amp;tab=wl\" id=\"gb8\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb8"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb36",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"36\" draggable=\"false\" href=\"https://www.youtube.com/?gl=US\" id=\"gb36\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -552px\"></span><span class=\"gb_Z\">YouTube</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb36"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb78",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"78\" draggable=\"false\" href=\"https://play.google.com/?hl=en&amp;tab=w8\" id=\"gb78\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb78"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb5",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"5\" draggable=\"false\" href=\"https://news.google.com/nwshp?hl=en&amp;tab=wn\" id=\"gb5\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb5"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb23",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"23\" draggable=\"false\" href=\"https://mail.google.com/mail/?tab=wm\" id=\"gb23\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -1104px\"></span><span class=\"gb_Z\">Gmail</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb23"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb53",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"53\" draggable=\"false\" href=\"https://contacts.google.com/?hl=en&amp;tab=wC\" id=\"gb53\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb53"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb49",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"49\" draggable=\"false\" href=\"https://drive.google.com/?tab=wo\" id=\"gb49\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -2001px\"></span><span class=\"gb_Z\">Drive</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb49"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb24",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"24\" draggable=\"false\" href=\"https://www.google.com/calendar?tab=wc\" id=\"gb24\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb24"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb119",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"119\" draggable=\"false\" href=\"https://plus.google.com/?gpsrc=ogpy0&amp;tab=wX\" id=\"gb119\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb119"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb51",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"51\" draggable=\"false\" href=\"https://translate.google.com/?hl=en&amp;tab=wT\" id=\"gb51\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb51"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb31",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"31\" draggable=\"false\" href=\"https://photos.google.com/?tab=wq&amp;pageId=none\" id=\"gb31\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb31"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb6",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"6\" draggable=\"false\" href=\"https://www.google.com/shopping?hl=en&amp;source=og&amp;tab=wf\" id=\"gb6\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb6"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb27",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"27\" draggable=\"false\" href=\"https://www.google.com/finance?tab=we\" id=\"gb27\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -2277px\"></span><span class=\"gb_Z\">Finance</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb27"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb25",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"25\" draggable=\"false\" href=\"https://docs.google.com/document/?usp=docs_alc\" id=\"gb25\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb25"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb10",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"10\" draggable=\"false\" href=\"https://books.google.com/bkshp?hl=en&amp;tab=wp\" id=\"gb10\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb10"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb30",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"30\" draggable=\"false\" href=\"https://www.blogger.com/?tab=wj\" id=\"gb30\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -2070px\"></span><span class=\"gb_Z\">Blogger</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb30"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb300",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"300\" draggable=\"false\" href=\"https://hangouts.google.com/\" id=\"gb300\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -1587px\"></span><span class=\"gb_Z\">Hangouts</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb300"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb136",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"136\" draggable=\"false\" href=\"https://keep.google.com/\" id=\"gb136\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_M\"></span><span class=\"gb_Z\">Keep</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb136"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb357",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"357\" draggable=\"false\" href=\"https://jamboard.google.com/?usp=jam_ald\" id=\"gb357\">",
+						"impact": null,
+						"none": [],
+						"target": ["#gb357"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb429",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"429\" draggable=\"false\" href=\"https://earth.google.com/web/\" id=\"gb429\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -1863px\"></span><span class=\"gb_Z\">Earth</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb429"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gb338",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_O\" data-pid=\"338\" draggable=\"false\" href=\"https://www.google.com/save\" id=\"gb338\"><div class=\"gb_3\"></div><div class=\"gb_4\"></div><div class=\"gb_5\"></div><div class=\"gb_6\"></div><span class=\"gb_W\" style=\"background-position:0 -1725px\"></span><span class=\"gb_Z\">Collections</span></a>",
+						"impact": null,
+						"none": [],
+						"target": ["#gb338"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "tsf",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<form class=\"tsf nj\" action=\"/search\" style=\"overflow:visible\" id=\"tsf\" method=\"GET\" name=\"f\" onsubmit=\"return q.value!=''\" role=\"search\">",
+						"impact": null,
+						"none": [],
+						"target": ["#tsf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "tophf",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"tophf\"><input name=\"source\" type=\"hidden\" value=\"hp\"><input value=\"0ONRXKCmPIzK_Qav_rygAQ\" name=\"ei\" type=\"hidden\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#tophf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "sbt",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<li data-view-type=\"1\" class=\"sbct\" id=\"sbt\" role=\"presentation\"><div class=\"sbtc\" role=\"option\"><div class=\"sbl1\"><span></span></div></div><div class=\"sbab\"><div class=\"sbai\">Remove</div></div></li>",
+						"impact": null,
+						"none": [],
+						"target": ["#sbt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "duf3-46",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"duf3-46\" data-jiis=\"up\" data-async-type=\"duffy3\" data-async-context-required=\"type,open,feature_id,async_id,entry_point,authority,card_id,ftoe,title,header,suggestions,surface,suggestions_types,suggestions_subtypes\" class=\"y yp\" data-ved=\"0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ-0EIBQ\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#duf3-46"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "sbfblt",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"duf3 aciXEb\" href=\"#\" id=\"sbfblt\" data-async-trigger=\"duf3-46\" jsaction=\"async.u\" data-ved=\"0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQtw8IBg\">Report inappropriate predictions</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#sbfblt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "gac_scont",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"gac_scont\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#gac_scont"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spch-dlg",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<dialog class=\"spch-dlg\" id=\"spch-dlg\">",
+						"impact": null,
+						"none": [],
+						"target": ["#spch-dlg"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spch",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"spch s2fp-h\" style=\"display:none\" id=\"spch\">",
+						"impact": null,
+						"none": [],
+						"target": ["#spch"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchx",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<button class=\"close-button\" id=\"spchx\" aria-label=\"close\">×</button>",
+						"impact": null,
+						"none": [],
+						"target": ["#spchx"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchc",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"spchc\" id=\"spchc\">",
+						"impact": null,
+						"none": [],
+						"target": ["#spchc"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchl",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span class=\"r8s4j\" id=\"spchl\"></span>",
+						"impact": null,
+						"none": [],
+						"target": ["#spchl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchb",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span class=\"button\" id=\"spchb\"><div class=\"microphone\"><span class=\"receiver\"></span><div class=\"wrapper\"><span class=\"stem\"></span><span class=\"shell\"></span></div></div></span>",
+						"impact": null,
+						"none": [],
+						"target": ["#spchb"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchi",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span class=\"spcht\" id=\"spchi\" style=\"color:#777\"></span>",
+						"impact": null,
+						"none": [],
+						"target": ["#spchi"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "spchf",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span class=\"spcht\" id=\"spchf\" style=\"color:#000\"></span>",
+						"impact": null,
+						"none": [],
+						"target": ["#spchf"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "main",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"content\" id=\"main\">",
+						"impact": null,
+						"none": [],
+						"target": ["#main"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "body",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span class=\"ctr-p\" id=\"body\">",
+						"impact": null,
+						"none": [],
+						"target": ["#body"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "lga",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div style=\"height:233px;margin-top:89px\" id=\"lga\">",
+						"impact": null,
+						"none": [],
+						"target": ["#lga"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "hplogo",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<img alt=\"Google\" height=\"92\" id=\"hplogo\" src=\"/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" srcset=\"/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png 2x\" style=\"padding-top:109px\" width=\"272\" onload=\"window.lol&amp;&amp;lol()\" data-atf=\"3\">",
+						"impact": null,
+						"none": [],
+						"target": ["#hplogo"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "prm-pt",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"prm-pt\" style=\"margin-top:12px\">",
+						"impact": null,
+						"none": [],
+						"target": ["#prm-pt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "prm",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"prm\">",
+						"impact": null,
+						"none": [],
+						"target": ["#prm"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "swml",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"swml\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#swml"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "footer",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"ctr-p\" id=\"footer\">",
+						"impact": null,
+						"none": [],
+						"target": ["#footer"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fbarcnt",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"fbarcnt\" style=\"height: 50px; visibility: visible;\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fbarcnt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "footcnt",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"footcnt\">",
+						"impact": null,
+						"none": [],
+						"target": ["#footcnt"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fbar",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div class=\"EvHmz hRvfYe\" id=\"fbar\" style=\"bottom: 0px; position: absolute;\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fbar"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fsr",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span id=\"fsr\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsr"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "dk2qOd",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"#\" data-bucket=\"websearch\" role=\"menuitem\" id=\"dk2qOd\" target=\"_blank\" jsaction=\"gf.sf\" data-ved=\"0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQLggP\">Send feedback</a>",
+						"impact": null,
+						"none": [],
+						"target": ["#dk2qOd"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "fsl",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<span id=\"fsl\">",
+						"impact": null,
+						"none": [],
+						"target": ["#fsl"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "footc",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"footc\">",
+						"impact": null,
+						"none": [],
+						"target": ["#footc"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "xfoot",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"xfoot\">",
+						"impact": null,
+						"none": [],
+						"target": ["#xfoot"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": "lb",
+								"id": "duplicate-id",
+								"impact": "minor",
+								"message": "Document has no static elements that share the same id attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div id=\"lb\"></div>",
+						"impact": null,
+						"none": [],
+						"target": ["#lb"]
+					}
+				],
+				"tags": ["cat.parsing", "wcag2a", "wcag411"]
+			},
+			{
+				"description": "Ensures every HTML document has a lang attribute",
+				"help": "<html> element must have a lang attribute",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application=webdriverjs",
+				"id": "html-has-lang",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-lang",
+								"impact": "serious",
+								"message": "The <html> element has a lang attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": null,
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.language", "wcag2a", "wcag311"]
+			},
+			{
+				"description": "Ensures the lang attribute of the <html> element has a valid value",
+				"help": "<html> element must have a valid value for the lang attribute",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/html-lang-valid?application=webdriverjs",
+				"id": "html-lang-valid",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [],
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "valid-lang",
+								"impact": "serious",
+								"message": "Value of lang attribute is included in the list of valid languages",
+								"relatedNodes": []
+							}
+						],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.language", "wcag2a", "wcag311"]
+			},
+			{
+				"description": "Ensures <img> elements have alternate text or a role of none or presentation",
+				"help": "Images must have alternate text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/image-alt?application=webdriverjs",
+				"id": "image-alt",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-alt",
+								"impact": "critical",
+								"message": "Element has an alt attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<img alt=\"Google\" height=\"92\" id=\"hplogo\" src=\"/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" srcset=\"/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png 2x\" style=\"padding-top:109px\" width=\"272\" onload=\"window.lol&amp;&amp;lol()\" data-atf=\"3\">",
+						"impact": null,
+						"none": [],
+						"target": ["#hplogo"]
+					}
+				],
+				"tags": [
+					"cat.text-alternatives",
+					"wcag2a",
+					"wcag111",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensure button and link text is not repeated as image alternative",
+				"help": "Text of buttons and links should not be repeated in the image alternative",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/image-redundant-alt?application=webdriverjs",
+				"id": "image-redundant-alt",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [],
+						"html": "<a href=\"/intl/en/about/?fg=1&amp;utm_source=google-US&amp;utm_medium=referral&amp;utm_campaign=hp-header\" onmousedown=\"return rwt(this,'','','','','AOvVaw1QHjdlDLdIC6vxB44RfcSD','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkNQCCAM','','',event)\">About</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#hptl > a:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a href=\"https://store.google.com/?utm_source=hp_header&amp;utm_medium=google_oo&amp;utm_campaign=GS100042\" onmousedown=\"return rwt(this,'','','','','AOvVaw0klweobGSi20iSKV1DeFH9','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQpMwCCAQ','','',event)\">Store</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#hptl > a:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"gb_P\" data-pid=\"23\" href=\"https://mail.google.com/mail/?tab=wm\">Gmail</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gb_P[data-pid=\"\\32 3\"]"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"gb_P\" data-pid=\"2\" href=\"https://www.google.com/imghp?hl=en&amp;tab=wi\">Images</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["a[data-pid=\"\\32 \"]"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#gb_70"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".JC0tCe"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"NKcBbd\" href=\"https://www.google.com/url?q=https://www.google.com/about/stories/womenrising%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3DUSA&amp;source=hpp&amp;id=19010569&amp;ct=3&amp;usg=AFQjCNG54-cOYhc9I3TXD5FHMOVzXiZtGQ&amp;sa=X&amp;ved=0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8IcBCAk\" rel=\"nofollow\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".NKcBbd"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/privacy/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw1Eu2HXBpFnmXCkPvEJJC_2','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8awCCAw','','',event)\">Privacy</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsr > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/terms/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3QPB5iVtcNuHWGnU6edD1k','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8qwCCA0','','',event)\">Terms</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsr > .Fx4vi:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsettl"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3XLzhicA5ZZW0afDbW0l2T','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkdQCCBA','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsl > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw2SJ4zwRVXKyZr53qG9dm4K','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQktQCCBE','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "duplicate-img-label",
+								"impact": "minor",
+								"message": "Element does not duplicate existing text in <img> alt text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsl > .Fx4vi:nth-child(2)"]
+					}
+				],
+				"tags": ["cat.text-alternatives", "best-practice"]
+			},
+			{
+				"description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+				"help": "Form elements should have a visible label",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/label-title-only?application=webdriverjs",
+				"id": "label-title-only",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "title-only",
+								"impact": "serious",
+								"message": "Form element does not solely use title attribute for its label",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gLFyf"]
+					}
+				],
+				"tags": ["cat.forms", "best-practice"]
+			},
+			{
+				"description": "Ensures every form element has a label",
+				"help": "Form elements must have labels",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/label?application=webdriverjs",
+				"id": "label",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "aria-label",
+								"impact": "serious",
+								"message": "aria-label attribute exists and is not empty",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "non-empty-title",
+								"impact": "serious",
+								"message": "Element has a title attribute",
+								"relatedNodes": []
+							}
+						],
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "multiple-label",
+								"impact": "serious",
+								"message": "Form element does not have multiple <label> elements",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "hidden-explicit-label",
+								"impact": "critical",
+								"message": "Form element has a visible explicit <label>",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gLFyf"]
+					}
+				],
+				"tags": [
+					"cat.forms",
+					"wcag2a",
+					"wcag332",
+					"wcag131",
+					"section508",
+					"section508.22.n"
+				]
+			},
+			{
+				"description": "Ensures the page has at most one banner landmark",
+				"help": "Page must not have more than one banner landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-no-duplicate-banner?application=webdriverjs",
+				"id": "landmark-no-duplicate-banner",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "page-no-duplicate-banner",
+								"impact": "moderate",
+								"message": "Document has no more than one banner landmark",
+								"relatedNodes": []
+							}
+						],
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": null,
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures the page has at most one contentinfo landmark",
+				"help": "Page must not have more than one contentinfo landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-no-duplicate-contentinfo?application=webdriverjs",
+				"id": "landmark-no-duplicate-contentinfo",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "page-no-duplicate-contentinfo",
+								"impact": "moderate",
+								"message": "Page does not have more than one contentinfo landmark",
+								"relatedNodes": []
+							}
+						],
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": null,
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures links have discernible text",
+				"help": "Links must have discernible text",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application=webdriverjs",
+				"id": "link-name",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"/intl/en/about/?fg=1&amp;utm_source=google-US&amp;utm_medium=referral&amp;utm_campaign=hp-header\" onmousedown=\"return rwt(this,'','','','','AOvVaw1QHjdlDLdIC6vxB44RfcSD','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkNQCCAM','','',event)\">About</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#hptl > a:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a href=\"https://store.google.com/?utm_source=hp_header&amp;utm_medium=google_oo&amp;utm_campaign=GS100042\" onmousedown=\"return rwt(this,'','','','','AOvVaw0klweobGSi20iSKV1DeFH9','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQpMwCCAQ','','',event)\">Store</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#hptl > a:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_P\" data-pid=\"23\" href=\"https://mail.google.com/mail/?tab=wm\">Gmail</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".gb_P[data-pid=\"\\32 3\"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_P\" data-pid=\"2\" href=\"https://www.google.com/imghp?hl=en&amp;tab=wi\">Images</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["a[data-pid=\"\\32 \"]"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#gb_70"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"NKcBbd\" href=\"https://www.google.com/url?q=https://www.google.com/about/stories/womenrising%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3DUSA&amp;source=hpp&amp;id=19010569&amp;ct=3&amp;usg=AFQjCNG54-cOYhc9I3TXD5FHMOVzXiZtGQ&amp;sa=X&amp;ved=0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8IcBCAk\" rel=\"nofollow\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": [".NKcBbd"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/privacy/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw1Eu2HXBpFnmXCkPvEJJC_2','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8awCCAw','','',event)\">Privacy</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsr > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/terms/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3QPB5iVtcNuHWGnU6edD1k','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8qwCCA0','','',event)\">Terms</a>",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsr > .Fx4vi:nth-child(2)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3XLzhicA5ZZW0afDbW0l2T','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkdQCCBA','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsl > .Fx4vi:nth-child(1)"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "has-visible-text",
+								"impact": "minor",
+								"message": "Element has text that is visible to screen readers",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw2SJ4zwRVXKyZr53qG9dm4K','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQktQCCBE','','',event)\">",
+						"impact": null,
+						"none": [
+							{
+								"data": null,
+								"id": "focusable-no-name",
+								"impact": "serious",
+								"message": "Element is not in tab order or has accessible text",
+								"relatedNodes": []
+							}
+						],
+						"target": ["#fsl > .Fx4vi:nth-child(2)"]
+					}
+				],
+				"tags": [
+					"cat.name-role-value",
+					"wcag2a",
+					"wcag412",
+					"wcag244",
+					"section508",
+					"section508.22.a"
+				]
+			},
+			{
+				"description": "Ensures tabindex attribute values are not greater than 0",
+				"help": "Elements should not have tabindex greater than zero",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/tabindex?application=webdriverjs",
+				"id": "tabindex",
+				"impact": null,
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "tabindex",
+								"impact": "serious",
+								"message": "Element does not have a tabindex greater than 0",
+								"relatedNodes": []
+							}
+						],
+						"html": "<a class=\"gb_b gb_xc\" href=\"https://www.google.com/intl/en/about/products?tab=wh\" title=\"Google apps\" aria-expanded=\"false\" role=\"button\" tabindex=\"0\" data-eqid=\"0click\"></a>",
+						"impact": null,
+						"none": [],
+						"target": [".gb_b"]
+					},
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "tabindex",
+								"impact": "serious",
+								"message": "Element does not have a tabindex greater than 0",
+								"relatedNodes": []
+							}
+						],
+						"html": "<div jscontroller=\"MC8mtf\" class=\"JC0tCe\" aria-label=\"Search by voice\" role=\"button\" tabindex=\"0\" jsaction=\"h5M12e;rcuQ6b:npT2md\"><span class=\"hb2Smf\"></span></div>",
+						"impact": null,
+						"none": [],
+						"target": [".JC0tCe"]
+					}
+				],
+				"tags": ["cat.keyboard", "best-practice"]
+			}
+		],
+		"timestamp": "2019-01-30T17:50:10.458Z",
+		"url": "https://www.google.com/?gws_rd=ssl",
+		"violations": [
+			{
+				"description": "Ensures elements with ARIA roles have all required ARIA attributes",
+				"help": "Required ARIA attributes must be provided",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-required-attr?application=webdriverjs",
+				"id": "aria-required-attr",
+				"impact": "critical",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": ["aria-expanded"],
+								"id": "aria-required-attr",
+								"impact": "critical",
+								"message": "Required ARIA attribute not present: aria-expanded",
+								"relatedNodes": []
+							}
+						],
+						"failureSummary": "Fix any of the following:\n  Required ARIA attribute not present: aria-expanded",
+						"html": "<input class=\"gLFyf gsfi\" maxlength=\"2048\" name=\"q\" type=\"text\" jsaction=\"paste:puy29d\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" role=\"combobox\" spellcheck=\"false\" title=\"Search\" value=\"\" aria-label=\"Search\">",
+						"impact": "critical",
+						"none": [],
+						"target": [".gLFyf"]
+					}
+				],
+				"tags": ["cat.aria", "wcag2a", "wcag412"]
+			},
+			{
+				"description": "Ensures each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+				"help": "Page must have means to bypass repeated blocks",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/bypass?application=webdriverjs",
+				"id": "bypass",
+				"impact": "serious",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "internal-link-present",
+								"impact": "serious",
+								"message": "No valid skip link found",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "header-present",
+								"impact": "serious",
+								"message": "Page does not have a header",
+								"relatedNodes": []
+							},
+							{
+								"data": null,
+								"id": "landmark",
+								"impact": "serious",
+								"message": "Page does not have a landmark region",
+								"relatedNodes": []
+							}
+						],
+						"failureSummary": "Fix any of the following:\n  No valid skip link found\n  Page does not have a header\n  Page does not have a landmark region",
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": "serious",
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": [
+					"cat.keyboard",
+					"wcag2a",
+					"wcag241",
+					"section508",
+					"section508.22.o"
+				]
+			},
+			{
+				"description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+				"help": "Page must have one main landmark",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application=webdriverjs",
+				"id": "landmark-one-main",
+				"impact": "moderate",
+				"nodes": [
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "page-has-main",
+								"impact": "moderate",
+								"message": "Page does not have a main landmark",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"failureSummary": "Fix all of the following:\n  Page does not have a main landmark",
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": "moderate",
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+				"help": "Page must contain a level-one heading",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application=webdriverjs",
+				"id": "page-has-heading-one",
+				"impact": "moderate",
+				"nodes": [
+					{
+						"all": [
+							{
+								"data": null,
+								"id": "page-has-heading-one",
+								"impact": "moderate",
+								"message": "Page must have a level-one heading",
+								"relatedNodes": []
+							}
+						],
+						"any": [],
+						"failureSummary": "Fix all of the following:\n  Page must have a level-one heading",
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": "moderate",
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.semantics", "best-practice"]
+			},
+			{
+				"description": "Ensures all page content is contained by landmarks",
+				"help": "All page content must be contained by landmarks",
+				"helpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application=webdriverjs",
+				"id": "region",
+				"impact": "moderate",
+				"nodes": [
+					{
+						"all": [],
+						"any": [
+							{
+								"data": null,
+								"id": "region",
+								"impact": "moderate",
+								"message": "Some page content is not contained by landmarks",
+								"relatedNodes": [
+									{
+										"html": "<a href=\"/intl/en/about/?fg=1&amp;utm_source=google-US&amp;utm_medium=referral&amp;utm_campaign=hp-header\" onmousedown=\"return rwt(this,'','','','','AOvVaw1QHjdlDLdIC6vxB44RfcSD','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkNQCCAM','','',event)\">About</a>",
+										"target": ["#hptl > a:nth-child(1)"]
+									},
+									{
+										"html": "<a href=\"https://store.google.com/?utm_source=hp_header&amp;utm_medium=google_oo&amp;utm_campaign=GS100042\" onmousedown=\"return rwt(this,'','','','','AOvVaw0klweobGSi20iSKV1DeFH9','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQpMwCCAQ','','',event)\">Store</a>",
+										"target": ["#hptl > a:nth-child(2)"]
+									},
+									{
+										"html": "<a class=\"gb_P\" data-pid=\"23\" href=\"https://mail.google.com/mail/?tab=wm\">Gmail</a>",
+										"target": [".gb_P[data-pid=\"\\32 3\"]"]
+									},
+									{
+										"html": "<a class=\"gb_P\" data-pid=\"2\" href=\"https://www.google.com/imghp?hl=en&amp;tab=wi\">Images</a>",
+										"target": ["a[data-pid=\"\\32 \"]"]
+									},
+									{
+										"html": "<a class=\"gb_Ue gb_Ba gb_Tb\" id=\"gb_70\" href=\"https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/%3Fgws_rd%3Dssl\" target=\"_top\">Sign in</a>",
+										"target": ["#gb_70"]
+									},
+									{
+										"html": "<img alt=\"Google\" height=\"92\" id=\"hplogo\" src=\"/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" srcset=\"/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png 2x\" style=\"padding-top:109px\" width=\"272\" onload=\"window.lol&amp;&amp;lol()\" data-atf=\"3\">",
+										"target": ["#hplogo"]
+									},
+									{
+										"html": "<span>How an activist uses Search to create opportunity in the DR Congo. </span>",
+										"target": [".szppmdbYutt__middle-slot-promo > span"]
+									},
+									{
+										"html": "<a class=\"NKcBbd\" href=\"https://www.google.com/url?q=https://www.google.com/about/stories/womenrising%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3DUSA&amp;source=hpp&amp;id=19010569&amp;ct=3&amp;usg=AFQjCNG54-cOYhc9I3TXD5FHMOVzXiZtGQ&amp;sa=X&amp;ved=0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8IcBCAk\" rel=\"nofollow\">",
+										"target": [".NKcBbd"]
+									},
+									{
+										"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/privacy/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw1Eu2HXBpFnmXCkPvEJJC_2','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8awCCAw','','',event)\">Privacy</a>",
+										"target": ["#fsr > .Fx4vi:nth-child(1)"]
+									},
+									{
+										"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/policies/terms/?fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3QPB5iVtcNuHWGnU6edD1k','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQ8qwCCA0','','',event)\">Terms</a>",
+										"target": ["#fsr > .Fx4vi:nth-child(2)"]
+									},
+									{
+										"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"button\" jsaction=\"foot.cst\" onmousedown=\"return rwt(this,'','','','','AOvVaw0XvhSqpc_GFt9aG_mRLp1F','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQzq0CCA4','','',event)\">",
+										"target": ["#fsettl"]
+									},
+									{
+										"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw3XLzhicA5ZZW0afDbW0l2T','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQkdQCCBA','','',event)\">",
+										"target": ["#fsl > .Fx4vi:nth-child(1)"]
+									},
+									{
+										"html": "<a class=\"Fx4vi\" href=\"https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1\" onmousedown=\"return rwt(this,'','','','','AOvVaw2SJ4zwRVXKyZr53qG9dm4K','','0ahUKEwigzs7TiJbgAhUMZd8KHS8_DxQQktQCCBE','','',event)\">",
+										"target": ["#fsl > .Fx4vi:nth-child(2)"]
+									}
+								]
+							}
+						],
+						"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+						"html": "<html itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\" class=\"deque-axe-is-ready\">",
+						"impact": "moderate",
+						"none": [],
+						"target": ["html"]
+					}
+				],
+				"tags": ["cat.keyboard", "best-practice"]
+			}
+		]
+	}
+]
