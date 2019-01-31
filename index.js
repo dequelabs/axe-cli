@@ -64,6 +64,11 @@ program
 	// TODO: Replace this with a reporter option, this required adding
 	// a reporter option to axe-webdriverjs
 	.option('--no-reporter', 'Turn the CLI reporter off')
+	.option(
+		'--chrome-options [options]',
+		'Options to provide to headless Chrome',
+		utils.splitList
+	)
 
 	// .option('-c, --config <file>', 'Path to custom axe configuration')
 	.parse(process.argv);
@@ -74,6 +79,17 @@ program.axeSource = utils.getAxeSource(program.axeSource);
 if (!program.axeSource) {
 	console.log(error('Unable to find the axe-core source file.'));
 	return;
+}
+
+if (program.chromeOptions) {
+	if (program.browser !== 'chrome-headless') {
+		console.error(
+			error('You may only provide --chrome-options when using headless chrome')
+		);
+		process.exit(2);
+	}
+
+	program.chromeOptions = program.chromeOptions.map(option => `--${option}`);
 }
 
 let cliReporter;
