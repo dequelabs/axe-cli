@@ -46,6 +46,10 @@ program
 		'-s, --save [filename]',
 		'Save the output as a JSON file. Filename is optional'
 	)
+	.option(
+		'-j, --stdout',
+		'Output results to STDOUT and silence all other output'
+	)
 	.option('-d, --dir <path>', 'Output directory')
 	.option('-a, --axe-source <path>', 'Path to axe.js file')
 	.option('-q, --exit', 'Exit with `1` failure code if any a11y tests fail')
@@ -73,11 +77,13 @@ program
 	// .option('-c, --config <file>', 'Path to custom axe configuration')
 	.parse(process.argv);
 
+const silentMode = !!program.stdout;
+
 program.browser = utils.parseBrowser(program.browser);
 program.axeSource = utils.getAxeSource(program.axeSource);
 
 if (!program.axeSource) {
-	console.log(error('Unable to find the axe-core source file.'));
+	console.error(error('Unable to find the axe-core source file.'));
 	return;
 }
 
@@ -93,7 +99,7 @@ if (program.chromeOptions) {
 }
 
 let cliReporter;
-if (program.reporter === false) {
+if (program.reporter === false || silentMode) {
 	cliReporter = function() {};
 } else {
 	cliReporter = function(...args) {
@@ -104,16 +110,18 @@ if (program.reporter === false) {
 // Try to match the version of axe that's used
 const axeVersion = utils.getAxeVersion(program.axeSource);
 
-// Setup axe with the appropriate config
-console.log(
-	colors.bold('Running axe-core ' + axeVersion + ' in ' + program.browser)
-);
+if (!silentMode) {
+	// Setup axe with the appropriate config
+	console.log(
+		colors.bold('Running axe-core ' + axeVersion + ' in ' + program.browser)
+	);
+}
 
 // Make valid URLs of all pages
 const urls = program.args.map(utils.parseUrl);
 
 if (urls.length === 0) {
-	console.log(error('No url was specified. Check `axe -h` for help\n'));
+	console.error(error('No url was specified. Check `axe -h` for help\n'));
 	process.exitCode = 1;
 	return;
 }
@@ -124,6 +132,10 @@ axeTestUrls(urls, program, {
 	 * Inform the user what page is tested
 	 */
 	onTestStart: function(url) {
+		if (silentMode) {
+			return;
+		}
+
 		console.log(
 			colors.bold('\nTesting ' + link(url)) +
 				' ... please wait, this may take a minute.'
@@ -168,6 +180,11 @@ axeTestUrls(urls, program, {
 	}
 })
 	.then(function(outcome) {
+		if (silentMode) {
+			process.stdout.write(JSON.stringify(outcome, null, 2));
+			return;
+		}
+
 		console.log('');
 		if (program.timer) {
 			console.timeEnd('Total test time');
@@ -189,7 +206,7 @@ axeTestUrls(urls, program, {
 					console.log('Saved file at', fileName, '\n');
 				})
 				.catch(err => {
-					console.log(error('Unable to save file!\n') + err);
+					console.error(error('Unable to save file!\n') + err);
 					process.exitCode = 1;
 					return Promise.resolve();
 				});
@@ -198,6 +215,9 @@ axeTestUrls(urls, program, {
 		}
 	})
 	.then(() => {
+		if (silentMode) {
+			return;
+		}
 		// Give a notification that 0 issues in axe doesn't mean perfect a11y
 		console.log(
 			colors.italic(
@@ -209,14 +229,14 @@ axeTestUrls(urls, program, {
 		);
 	})
 	.catch(e => {
-		console.log(' ');
+		console.error(' ');
 		if (!program['show-errors']) {
-			console.log(error('An error occurred while testing this page.'));
+			console.error(error('An error occurred while testing this page.'));
 		} else {
-			console.log(error('Error: %j \n $s'), e.message, e.stack);
+			console.error(error('Error: %j \n $s'), e.message, e.stack);
 		}
 
-		console.log(
+		console.error(
 			'Please report the problem to: ' +
 				link('https://github.com/dequelabs/axe-cli/issues/') +
 				'\n'
