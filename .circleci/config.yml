@@ -33,6 +33,7 @@ jobs:
       - run: npm config set "//registry.npmjs.org/:_authToken" $NPM_AUTH
       - run: npm publish
 
+  github_release:
     steps:
       - checkout
       - run: go get gopkg.in/aktau/github-release.v0
