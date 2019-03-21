@@ -1,4 +1,3 @@
-/* global mocha */
 'use strict';
 
 const assert = require('chai').assert;
