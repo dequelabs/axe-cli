@@ -1,6 +1,9 @@
 'use strict';
 
 const program = require('commander');
+
+const prettyjson = require('prettyjson');
+
 const colors = require('colors');
 const link = colors.underline.blue;
 const error = colors.red.bold;
@@ -149,7 +152,8 @@ axeTestUrls(urls, program, {
 	 * Put the result in the console
 	 */
 	onTestComplete: function logResults(results) {
-		const violations = results.violations;
+		const { violations, testEngine, testEnvironment, testRunner } = results;
+
 		if (violations.length === 0) {
 			cliReporter(colors.green('  0 violations found!'));
 			return;
@@ -173,6 +177,14 @@ axeTestUrls(urls, program, {
 		}, 0);
 
 		cliReporter(error('\n%d Accessibility issues detected.'), issueCount);
+
+		// output `metadata`
+		const metadata = {
+			'Test Runner': testRunner,
+			'Test Engine': testEngine,
+			'Test Environment': testEnvironment
+		};
+		cliReporter(`\n`, prettyjson.render(metadata));
 
 		if (program.exit) {
 			process.exitCode = 1;

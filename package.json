@@ -53,6 +53,7 @@
 		"mocha": "^5.1.0",
 		"node-static": "^0.7.11",
 		"prettier": "^1.16.4",
+		"prettyjson": "^1.2.1",
 		"snyk": "^1.136.3"
 	},
 	"snyk": true,
