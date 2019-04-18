@@ -178,13 +178,12 @@ axeTestUrls(urls, program, {
 
 		cliReporter(error('\n%d Accessibility issues detected.'), issueCount);
 
-		// output `metadata`
 		const metadata = {
 			'Test Runner': testRunner,
 			'Test Engine': testEngine,
 			'Test Environment': testEnvironment
 		};
-		cliReporter(`\n`, prettyjson.render(metadata));
+		cliReporter(`\n${prettyjson.render(metadata)}`);
 
 		if (program.exit) {
 			process.exitCode = 1;
