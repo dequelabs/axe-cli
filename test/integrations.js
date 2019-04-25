@@ -54,6 +54,11 @@ describe('integrations', function() {
 		var listResult;
 		await axeTestUrls(urls, program, {
 			onTestComplete: function(results) {
+				assert.containsAllKeys(results, [
+					'testEngine',
+					'testEnvironment',
+					'testRunner'
+				]);
 				listResult = results.violations.find(result => result.id === 'list');
 				assert.lengthOf(listResult.nodes, 2);
 				assert.deepEqual(listResult.nodes[0].target, ['#list']);

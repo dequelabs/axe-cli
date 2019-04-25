@@ -4,7 +4,6 @@ const program = require('commander');
 const colors = require('colors');
 const link = colors.underline.blue;
 const error = colors.red.bold;
-
 const version = require('./package.json').version;
 const axeTestUrls = require('./lib/axe-test-urls');
 const saveOutcome = require('./lib/save-outcome');
@@ -73,7 +72,10 @@ program
 		'Options to provide to headless Chrome',
 		utils.splitList
 	)
-
+	.option(
+		'-v, --verbose',
+		'Output metadata like test tool name, version and environment'
+	)
 	// .option('-c, --config <file>', 'Path to custom axe configuration')
 	.parse(process.argv);
 
@@ -149,7 +151,8 @@ axeTestUrls(urls, program, {
 	 * Put the result in the console
 	 */
 	onTestComplete: function logResults(results) {
-		const violations = results.violations;
+		const { violations, testEngine, testEnvironment, testRunner } = results;
+
 		if (violations.length === 0) {
 			cliReporter(colors.green('  0 violations found!'));
 			return;
@@ -173,6 +176,15 @@ axeTestUrls(urls, program, {
 		}, 0);
 
 		cliReporter(error('\n%d Accessibility issues detected.'), issueCount);
+
+		if (program.verbose) {
+			const metadata = {
+				'Test Runner': testRunner,
+				'Test Engine': testEngine,
+				'Test Environment': testEnvironment
+			};
+			cliReporter(`\n${JSON.stringify(metadata, null, 2)}`);
+		}
 
 		if (program.exit) {
 			process.exitCode = 1;
