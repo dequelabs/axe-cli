@@ -167,3 +167,11 @@ If you find your page is not ready after axe has determined it has loaded, you c
 ```
 axe www.deque.com --load-delay=2000
 ```
+
+## Verbose output
+
+To see additional information like test tool name, version and environment details, use the `--version` flag, `-v` for short.
+
+```
+axe www.deque.com --verbose
+```
