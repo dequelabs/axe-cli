@@ -1,109 +1,92 @@
-/* global mocha */
 'use strict';
 
-const assert = require('chai').assert
-const testPages = require('../lib/axe-test-urls')
+const assert = require('chai').assert;
+const testPages = require('../lib/axe-test-urls');
 
-describe('testPages', function () {
-	let config, mockDriver
+describe('testPages', function() {
+	let config, mockDriver;
 
 	beforeEach(() => {
 		mockDriver = {
-			get: (arg) => Promise.resolve(arg),
-			executeAsyncScript: (arg) => Promise.resolve(arg),
-			executeScript: (arg) => Promise.resolve(arg),
-			wait: (arg) => Promise.resolve(arg),
+			get: async arg => arg,
+			executeAsyncScript: async arg => arg,
+			executeScript: async arg => arg,
+			wait: async arg => arg,
 			switchTo: () => ({ defaultContent: () => {} }),
-			findElements: () => Promise.resolve([]),
-			quit: (arg) => Promise.resolve(arg)
-		}
-		config = { driver: mockDriver }
-	})
+			findElements: async () => [],
+			quit: async arg => arg
+		};
+		config = { driver: mockDriver };
+	});
 
 	it('return a promise', () => {
-		assert.instanceOf(
-			testPages([], config, {}),
-			Promise
-		)
-	})
+		assert.instanceOf(testPages([], config, {}), Promise);
+	});
 
-	it('calls driver.get() for each URL', (done) => {
-		const urlsCalled = []
-		const urls = ['http://foo', 'http://bar', 'http://baz']
+	it('calls driver.get() for each URL', async () => {
+		const urlsCalled = [];
+		const urls = ['http://foo', 'http://bar', 'http://baz'];
 
-		mockDriver.get = (url) => {
-			urlsCalled.push(url)
-			return Promise.resolve(url)
-		}
+		mockDriver.get = async url => {
+			urlsCalled.push(url);
+			return url;
+		};
 
-		testPages(urls, config, {})
-		.catch(e => { throw new Error(e) })
+		await testPages(urls, config, {});
 
-		setTimeout(() => {
-			assert.deepEqual(urlsCalled, urls)
-			done()
-		}, 50)
-	})
+		assert.deepEqual(urlsCalled, urls);
+	});
 
-	it('waits until the document is ready to have a className added', (done) => {
-		const asyncScripts = []
-		let waitCalls = 0
+	it('waits until the document is ready to have a className added', async () => {
+		const asyncScripts = [];
+		let waitCalls = 0;
 
-		mockDriver.executeAsyncScript = (script) => {
-			asyncScripts.push(script)
-			return Promise.resolve(script)
-		}
-		mockDriver.wait = (script) => {
-			waitCalls++
-			return Promise.resolve(script)
-		}
+		mockDriver.executeAsyncScript = async script => {
+			asyncScripts.push(script);
+			return script;
+		};
+		mockDriver.wait = async script => {
+			waitCalls++;
+			return script;
+		};
 
-		testPages(['http://foo'], config, {})
-		.catch(e => { throw e })
+		await testPages(['http://foo'], config, {});
 
-		setTimeout(() => {
-			assert.include(
-				asyncScripts[0].toString(),
-				'.innerHTML = \'document.documentElement.classList.add("deque-axe-is-ready");\''
-			)
-			assert.equal(waitCalls, 1)
-			done()
-		}, 10)
-	})
+		assert.equal(asyncScripts.length, 2);
+		const [script] = asyncScripts;
+		assert.match(
+			script,
+			/script\.innerHTML\s*=[\s\S]*['"]document\.documentElement\.classList\.add\(['"]deque-axe-is-ready/
+		);
 
-	it('injects axe into the page', (done) => {
+		assert.equal(waitCalls, 1);
+	});
+
+	it('injects axe into the page', async () => {
 		const scripts = [];
-		config.axeSource = 'axe="hi, I am axe"'
-		mockDriver.executeScript = (script) => {
-			scripts.push(script)
-			return Promise.resolve(script)
-		}
+		config.axeSource = 'axe="hi, I am axe"';
+		mockDriver.executeScript = async script => {
+			scripts.push(script);
+			return script;
+		};
 
-		testPages(['http://foo'], config, {})
-		.catch(e => { throw e })
+		await testPages(['http://foo'], config, {});
+		assert.include(scripts[0].toString(), config.axeSource);
+	});
 
-		setTimeout(() => {
-			assert.include(scripts[0].toString(), config.axeSource)
-			done()
-		}, 10)
-	})
+	it('runs axe once the page is loaded', async () => {
+		const asyncScripts = [];
+		mockDriver.executeAsyncScript = async script => {
+			asyncScripts.push(script);
+			return script;
+		};
 
-	it('runs axe once the page is loaded', (done) => {
-		const asyncScripts = []
-		mockDriver.executeAsyncScript = (script) => {
-			asyncScripts.push(script)
-			return Promise.resolve(script)
-		}
+		await testPages(['http://foo'], config, {});
 
-		testPages(['http://foo'], config, {})
-		.catch(e => { throw e })
-
-		setTimeout(() => {
-			assert.isDefined(
-				asyncScripts.map(script => script.toString())
+		assert.isDefined(
+			asyncScripts
+				.map(script => script.toString())
 				.find(script => script.match(/(axe\.run)|(axe\.a11yCheck)/))
-			)
-			done()
-		}, 10)
-	})
-})
+		);
+	});
+});

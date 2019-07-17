@@ -2,7 +2,7 @@
 
 ## Contributor License Agreement
 
-In order to contribute, you must accept the [contributor license agreement](https://cla-assistant.io/dequelabs/axe-core) (CLA). Acceptance of this agreement will be checked automatically and pull requests without a CLA cannot be merged.
+In order to contribute, you must accept the [contributor license agreement](https://cla-assistant.io/dequelabs/axe-cli) (CLA). Acceptance of this agreement will be checked automatically and pull requests without a CLA cannot be merged.
 
 ## Contribution Guidelines
 
@@ -61,4 +61,3 @@ To run axe-cli from your development environment, run:
 ```
 node index.js www.deque.com
 ```
-
