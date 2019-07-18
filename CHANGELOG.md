@@ -1,3 +1,23 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.1.0](https://github.com/dequelabs/axe-cli/compare/v3.0.0...v3.1.0) (2019-07-15)
+
+### Bug Fixes
+
+- correct scope documentation ([#80](https://github.com/dequelabs/axe-cli/issues/80)) ([81b4312](https://github.com/dequelabs/axe-cli/commit/81b4312)), closes [#75](https://github.com/dequelabs/axe-cli/issues/75)
+
+### Features
+
+- add `--chrome-options` flag ([#81](https://github.com/dequelabs/axe-cli/issues/81)) ([6214bcb](https://github.com/dequelabs/axe-cli/commit/6214bcb)), closes [#65](https://github.com/dequelabs/axe-cli/issues/65)
+- add `--stdout` flag ([#83](https://github.com/dequelabs/axe-cli/issues/83)) ([06328bf](https://github.com/dequelabs/axe-cli/commit/06328bf)), closes [#15](https://github.com/dequelabs/axe-cli/issues/15)
+- add meta data to cli output ([#94](https://github.com/dequelabs/axe-cli/issues/94)) ([7ee59e9](https://github.com/dequelabs/axe-cli/commit/7ee59e9))
+
+### Tests
+
+- make "ready class" test more forgiving ([#74](https://github.com/dequelabs/axe-cli/issues/74)) ([fc2b595](https://github.com/dequelabs/axe-cli/commit/fc2b595))
+
 <a name="3.0.0"></a>
 
 # [3.0.0](https://github.com/dequelabs/axe-cli/compare/v2.1.0-alpha.1...v3.0.0) (2018-03-28)
