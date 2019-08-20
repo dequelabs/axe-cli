@@ -61,3 +61,21 @@ To run axe-cli from your development environment, run:
 ```
 node index.js www.deque.com
 ```
+
+## Publishing
+
+Publishing `axe-cli` to the npm registry is handled by CircleCI. To publish a stable version, you'll do something like this:
+
+```
+# Ensure you have the latest code
+$ git checkout develop
+$ git pull
+# Create a release branch
+$ git create-branch release-<YYYY-MM-DD>
+# Run the release script
+$ npm run release
+# push it
+$ git push --follow-tags origin release-<YYYY-MM-DD>
+```
+
+Then open a release PR into the `master` branch.
