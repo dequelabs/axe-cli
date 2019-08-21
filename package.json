@@ -1,6 +1,6 @@
 {
 	"name": "axe-cli",
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"description": "A CLI for accessibility testing using axe-core",
 	"main": "index.js",
 	"engines": {
@@ -9,7 +9,8 @@
 	"scripts": {
 		"test": "mocha test/*.js",
 		"lint": "eslint *.js lib/*.js test/*.js",
-		"fmt": "prettier --write *.{js,json,md} lib/*.js test/*.js"
+		"fmt": "prettier --write *.{js,json,md} lib/*.js test/*.js",
+		"release": "standard-version -a"
 	},
 	"repository": {
 		"type": "git",
@@ -39,7 +40,7 @@
 	"dependencies": {
 		"axe-core": "^3.2.2",
 		"axe-webdriverjs": "^2.2.0",
-		"chromedriver": "^2.46.0",
+		"chromedriver": "^76.0.0",
 		"colors": "^1.3.3",
 		"commander": "^2.19.0",
 		"selenium-webdriver": "^3.6.0"
@@ -53,7 +54,8 @@
 		"mocha": "^5.1.0",
 		"node-static": "^0.7.11",
 		"prettier": "^1.16.4",
-		"snyk": "^1.136.3"
+		"snyk": "^1.136.3",
+		"standard-version": "^6.0.1"
 	},
 	"snyk": true,
 	"prettier": {
