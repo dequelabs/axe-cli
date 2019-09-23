@@ -77,7 +77,7 @@ program
 		'Output metadata like test tool name, version and environment'
 	)
 	.option(
-		'--chromedriver-path',
+		'--chromedriver-path <path>',
 		'Absolute path to the desired chromedriver executable'
 	)
 	// .option('-c, --config <file>', 'Path to custom axe configuration')
