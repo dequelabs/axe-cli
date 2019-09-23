@@ -76,6 +76,10 @@ program
 		'-v, --verbose',
 		'Output metadata like test tool name, version and environment'
 	)
+	.option(
+		'--chromedriver-path',
+		'Absolute path to the desired chromedriver executable'
+	)
 	// .option('-c, --config <file>', 'Path to custom axe configuration')
 	.parse(process.argv);
 

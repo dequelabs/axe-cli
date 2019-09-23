@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 const { startDriver, stopDriver } = require('../lib/webdriver');
 const chromedriver = require('chromedriver');
 const chrome = require('selenium-webdriver/chrome');
+const path = require('path');
 
 describe('startDriver', () => {
 	let config, browser;
@@ -61,6 +62,16 @@ describe('startDriver', () => {
 		const service = chrome.getDefaultService();
 
 		assert.equal(service.executable_, chromedriver.path);
+	});
+
+	it('uses the passed in chromedriver path with chrome-headless', async () => {
+		browser = 'chrome-headless';
+		config.chromedriverPath = path.relative(process.cwd(), chromedriver.path);
+		await startDriver(config);
+		const service = chrome.getDefaultService();
+
+		assert.notEqual(config.chromedriverPath, chromedriver.path);
+		assert.equal(service.executable_, config.chromedriverPath);
 	});
 
 	it('sets the --headless flag with chrome-headless', async () => {
