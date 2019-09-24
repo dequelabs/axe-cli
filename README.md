@@ -175,3 +175,11 @@ To see additional information like test tool name, version and environment detai
 ```
 axe www.deque.com --verbose
 ```
+
+## ChromeDriver Path
+
+If you need to test your page using an older version of Chrome, you can use `--chromedriver-path` followed by the absolute path to the desired version of the ChromeDriver executable.
+
+```
+axe www.deque.com --chromedriver-path="absolute/path/to/chromedriver"
+```
