@@ -6,11 +6,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- **circleci:** use ([7a8ca66](https://github.com/dequelabs/axe-cli/commit/7a8ca66))
+- **circleci:** use `npm ci` to not override package-lock.json ([7a8ca66](https://github.com/dequelabs/axe-cli/commit/7a8ca66))
 
 ### Features
 
-- **webdriver:** add option ([134b299](https://github.com/dequelabs/axe-cli/commit/134b299))
+- **webdriver:** add option 'chromedriver-path' ([134b299](https://github.com/dequelabs/axe-cli/commit/134b299))
 
 ## [3.1.0](https://github.com/dequelabs/axe-cli/compare/v3.0.0...v3.1.0) (2019-07-15)
 
