@@ -2,13 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.1.1](https://github.com/dequelabs/axe-cli/compare/v3.1.0...v3.1.1) (2019-08-20)
+## [3.2.0](https://github.com/dequelabs/axe-cli/compare/v3.1.1...v3.2.0) (2019-09-30)
 
+### Bug Fixes
+
+- **circleci:** use ([7a8ca66](https://github.com/dequelabs/axe-cli/commit/7a8ca66))
+
+### Features
+
+- **webdriver:** add option ([134b299](https://github.com/dequelabs/axe-cli/commit/134b299))
+
+### [3.1.1](https://github.com/dequelabs/axe-cli/compare/v3.1.0...v3.1.1) (2019-08-20)
 
 ### Bug Fixes
 
 - Update Chromedriver dependency [#103](https://github.com/dequelabs/axe-cli/issues/103) [#104](https://github.com/dequelabs/axe-cli/issues/104)
-
 
 ## [3.1.0](https://github.com/dequelabs/axe-cli/compare/v3.0.0...v3.1.0) (2019-07-15)
 
