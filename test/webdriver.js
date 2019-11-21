@@ -83,6 +83,17 @@ describe('startDriver', () => {
 		assert.isObject(chromeOptions);
 		assert.deepEqual(chromeOptions.args, ['--headless']);
 	});
+
+	it('sets the --chrome-options flag with no-sandbox', async () => {
+		browser = 'chrome-headless';
+		config.chromeOptions = ['--no-sandbox'];
+		const { builder } = await startDriver(config);
+		const capabilities = await builder.getCapabilities();
+		const chromeOptions = capabilities.get('chromeOptions');
+
+		assert.isArray(chromeOptions.args);
+		assert.deepEqual(chromeOptions.args, ['--headless', '--no-sandbox']);
+	});
 });
 
 describe('stopDriver', () => {
