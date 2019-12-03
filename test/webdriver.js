@@ -81,18 +81,32 @@ describe('startDriver', () => {
 		const chromeOptions = capabilities.get('chromeOptions');
 
 		assert.isObject(chromeOptions);
-		assert.deepEqual(chromeOptions.args, ['--headless']);
+		assert.isTrue(chromeOptions.args.includes('--headless'));
 	});
 
-	it('sets the --chrome-options flag with no-sandbox', async () => {
+	it('sets the --no-sandbox flag with chrome-headless', async () => {
 		browser = 'chrome-headless';
-		config.chromeOptions = ['--no-sandbox'];
+		const { builder } = await startDriver(config);
+		const capabilities = await builder.getCapabilities();
+		const chromeOptions = capabilities.get('chromeOptions');
+
+		assert.isObject(chromeOptions);
+		assert.isTrue(chromeOptions.args.includes('--no-sandbox'));
+	});
+
+	it('sets the --chrome-options flag with custom args', async () => {
+		browser = 'chrome-headless';
+		config.chromeOptions = ['window-size=1024,768'];
 		const { builder } = await startDriver(config);
 		const capabilities = await builder.getCapabilities();
 		const chromeOptions = capabilities.get('chromeOptions');
 
 		assert.isArray(chromeOptions.args);
-		assert.deepEqual(chromeOptions.args, ['--headless', '--no-sandbox']);
+		assert.deepEqual(chromeOptions.args, [
+			'--headless',
+			'--no-sandbox',
+			'window-size=1024,768'
+		]);
 	});
 });
 
