@@ -11,11 +11,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+          key: v2-npm-cache-{{ checksum "package-lock.json" }}
       - run: npm ci
       - run: npm install chromedriver@latest
       - save_cache:
-          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+          key: v2-npm-cache-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
   tests:
@@ -23,7 +23,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-npm-cache-{{ checksum "package-lock.json" }}
+          key: v2-npm-cache-{{ checksum "package-lock.json" }}
       - run: npm run lint
       - run: npm test
 
