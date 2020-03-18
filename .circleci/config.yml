@@ -24,6 +24,7 @@ jobs:
       - checkout
       - restore_cache:
           key: v1-npm-cache-{{ checksum "package-lock.json" }}
+          key: v1-npm-cache-
       - run: npm run lint
       - run: npm test
 
