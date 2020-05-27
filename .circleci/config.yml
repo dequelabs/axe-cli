@@ -37,7 +37,7 @@ jobs:
 
   github_release:
     docker:
-      - image: circleci/golang:1.8
+      - image: circleci/golang:1.10
     steps:
       - checkout
       - run: go get gopkg.in/aktau/github-release.v0
