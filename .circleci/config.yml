@@ -23,8 +23,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-npm-cache-{{ checksum "package-lock.json" }}
-          key: v1-npm-cache-
+          keys:
+            - v1-npm-cache-{{ checksum "package-lock.json" }}
+            - v1-npm-cache-
       - run: npm run lint
       - run: npm test
 
@@ -37,7 +38,7 @@ jobs:
 
   github_release:
     docker:
-      - image: circleci/golang:1.8
+      - image: circleci/golang:1.10
     steps:
       - checkout
       - run: go get gopkg.in/aktau/github-release.v0
