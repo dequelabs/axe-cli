@@ -29,7 +29,7 @@
 		"organization": "Deque Systems, Inc.",
 		"url": "http://github.com/wilcofiers/"
 	},
-	"license": "ISC",
+	"license": "MPL-2.0",
 	"bugs": {
 		"url": "https://github.com/dequelabs/axe-cli/issues"
 	},
