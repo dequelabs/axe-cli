@@ -55,7 +55,7 @@
 		"node-static": "^0.7.11",
 		"prettier": "^1.16.4",
 		"snyk": "^1.136.3",
-		"standard-version": "^6.0.1"
+		"standard-version": "^8.0.1"
 	},
 	"snyk": true,
 	"prettier": {
