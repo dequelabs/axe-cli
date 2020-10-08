@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.1](https://github.com/dequelabs/axe-cli/compare/v3.2.0...v3.2.1) (2020-10-08)
+
+### Bug Fixes
+
+- drop node v6/7 support ([#137](https://github.com/dequelabs/axe-cli/issues/137)) ([00b23b9](https://github.com/dequelabs/axe-cli/commit/00b23b9))
+- Enable using of --chrome-options argument ([#134](https://github.com/dequelabs/axe-cli/issues/134)) ([a0da6ba](https://github.com/dequelabs/axe-cli/commit/a0da6ba))
+
 ## [3.2.0](https://github.com/dequelabs/axe-cli/compare/v3.1.1...v3.2.0) (2019-09-30)
 
 ### Bug Fixes

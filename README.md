@@ -1,4 +1,10 @@
-# axe-cli
+# [DEPRECATED] axe-cli
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+> This repository has been deprecated. The package has been moved to [axe-core-npm](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli). The package will be available via NPM as [`@axe-core/cli`](https://www.npmjs.com/package/@axe-core/cli).
+
+---
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/dequelabs/axe-cli.svg)](https://greenkeeper.io/)
 
@@ -170,7 +176,7 @@ axe www.deque.com --load-delay=2000
 
 ## Verbose output
 
-To see additional information like test tool name, version and environment details, use the `--version` flag, `-v` for short.
+To see additional information like test tool name, version and environment details, use the `--verbose` flag, `-v` for short.
 
 ```
 axe www.deque.com --verbose
